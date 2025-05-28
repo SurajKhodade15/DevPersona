@@ -1,0 +1,18 @@
+<div class="align-items-center default-container">
+  <div class="content col-lg-8">
+    <h2 class="default-topic">Development Showcase</h2>
+    
+    <!-- New text content -->
+    <p class="project-intro">
+      Below are some of the key projects I've worked on, showcasing a range of technologies, design approaches, and problem-solving skills.
+    </p>
+
+    <div class="row">
+      @for(project of projects; track project.id) {
+        <div class="col-lg-4 col-md-6 mb-4">
+          <app-project-card [card]="project"></app-project-card>
+        </div>
+      }
+    </div>
+  </div>
+</div>

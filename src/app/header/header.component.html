@@ -1,0 +1,37 @@
+<div class="shadow-sm bg-dark">
+  <nav class="navbar navbar-expand-md header" role="navigation">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a class="navbar-brand" href="https://github.com/SurajK221b" target="_blank">Suraj Khodade</a>
+
+      <!-- Hamburger button for mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navigation links -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+              class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/about" routerLinkActive="active" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/skills" routerLinkActive="active" class="nav-link">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/portfolio" routerLinkActive="active" class="nav-link">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/contact" routerLinkActive="active" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<router-outlet></router-outlet>

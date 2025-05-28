@@ -1,0 +1,17 @@
+.default-topic {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #e2e24d;
+  margin-bottom: 1rem;
+}
+@media (max-width: 768px) {
+  .default-topic {
+    font-size: 1.3rem;
+  }
+}
+.project-intro {
+  color: #cccccc;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}

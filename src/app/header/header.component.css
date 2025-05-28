@@ -1,0 +1,84 @@
+/* header.component.css */
+
+/* Header Container */
+.header {
+  width: 100%;
+  background-color: #2d2d30;
+  
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  padding: 10px 0;
+  border-bottom: 2px solid #888d88;
+  background: linear-gradient(to right, #2c3e50, #1e1e1e);
+}
+
+/* Brand Title */
+.navbar-brand {
+  color: #e2e24d;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/* Nav Links */
+.nav-link {
+  color: #9CDCFE;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #ffffff;
+}
+
+/* Toggler */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%2899, 199, 255, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Responsive Menu */
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: row !important;
+    justify-content: flex-start;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 0 10px;
+    display: flex !important;
+    gap: 10px;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 0;
+    flex: 0 0 auto;
+  }
+}
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    display: flex !important;
+  }
+
+  .navbar-nav .nav-item {
+    flex: 0 1 auto;
+  }
+}
+.navbar-nav::-webkit-scrollbar {
+  display: none;
+}
+.navbar-nav {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

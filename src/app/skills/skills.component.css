@@ -1,0 +1,14 @@
+.default-topic {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #e2e24d;
+  margin-bottom: 1rem;
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden;     /* Optional: hide overflow */
+  text-overflow: ellipsis; /* Optional: show "..." if it overflows */
+}
+@media (max-width: 768px) {
+  .default-topic {
+    font-size: 1.3rem;
+  }
+}

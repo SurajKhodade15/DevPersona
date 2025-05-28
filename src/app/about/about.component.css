@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Container */
+.default-container {
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Content layout */
+.content {
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* Headline */
+.default-topic {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #e2e24d;
+  margin-bottom: 1rem;
+}
+
+/* Paragraph */
+.default-p {
+  color: #d4d4d4;
+  line-height: 1.7;
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+/* Highlighted text */
+.default-highlight {
+  color: #9CDCFE;
+  font-weight: 500;
+}
+
+/* Image */
+.about-picture {
+  width: 100%;
+  max-width: 820px;
+  margin: 1rem 0 2rem 0;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.15);
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-picture:hover {
+  transform: scale(1.02);
+}
+
+/* Unified button style */
+button a.a-green {
+  background-color: #00ff99;
+  color: #1e1e1e;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button a.a-green:hover {
+  background-color: #00cc7a;
+  transform: translateY(-2px);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .about-picture {
+    width: 100%;
+    max-width: 100%;
+    margin: 0.8rem 0 1.8rem 0;
+  }
+
+  .default-topic {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .default-p {
+    font-size: 0.95rem;
+    text-align: justify;
+  }
+
+  .default-container {
+    padding: 1.5rem 1rem;
+  }
+
+  button a.a-green {
+    width: 100%;
+    text-align: center;
+  }
+}
+.home-buttons button:hover {
+  background-color: #9CDCFE;
+}
+@media (max-width: 768px) {
+  .default-topic {
+    font-size: 1.3rem;
+  }
+}

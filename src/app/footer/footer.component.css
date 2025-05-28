@@ -1,0 +1,77 @@
+@import '../../styles.css';
+
+.footer {
+  background: linear-gradient(to right, #2c3e50, #1e1e1e); /* Match header gradient */
+  border-top: 2px solid #888d88;
+  padding: 20px 0;
+  color: #9CDCFE;
+  
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1020;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  flex: 1;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-icons a {
+  color: #C586C0;
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+  position: relative;
+  text-decoration: none;
+}
+
+.footer-icons a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: #00FF00;
+  transition: width 0.3s ease;
+}
+
+.footer-icons a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.footer-icons a:hover,
+.footer-icons a:active {
+  color: #ffffff;
+}
+
+.fab,
+.fas {
+  font-size: 24px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer p {
+    margin-bottom: 10px;
+  }
+}
