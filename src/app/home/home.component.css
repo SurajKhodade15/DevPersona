@@ -1,60 +1,134 @@
-/* Header Container */
-.header {
-  width: 100%;
-  background-color: #2d2d30;
-  position: sticky;
-  top: 0;
-  z-index: 1030;
-  padding: 10px 0;
-  border-bottom: 2px solid #888d88;
-  background: linear-gradient(to right, #2c3e50, #1e1e1e);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+.home-container {
+  padding: 30px 20px 40px; /* reduced top padding from 60px to 30px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1e1e1e;
+  min-height: calc(100vh - 80px); /* still maintains full height minus navbar */
 }
 
-/* Brand Title */
-.navbar-brand {
-  color: #e2e24d;
-  font-size: 1.3rem;
-  font-weight: bold;
+.home-content {
+  max-width: 960px;
+  text-align: start;
+  padding: 0 20px;
 }
 
-/* Nav Links (Desktop and Modal) */
-.nav-link {
+.home-title {
+  font-size: 3rem;
+  color: #569CD6;
+  margin-bottom: 2rem;
+  line-height: 3.5rem;
+  font-weight: 700;
+}
+
+.home-author {
+  font-size: 2.2rem;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  line-height: 3rem;
+  font-weight: 500;
+}
+
+.author-name {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+#dynamic-text {
+  color: #FFD700;
+  border-right: 2px solid #FFD700;
+  padding-right: 6px;
+  animation: blink-caret 0.7s step-end infinite;
+  font-weight: 500;
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #FFD700; }
+}
+
+blockquote {
+  color: #D4D4D4;
+  font-size: 1.1rem;
+  font-style: italic;
+  margin: 1.5rem 0;
+}
+
+.home-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.home-buttons button {
+  background-color: transparent;
+  border: 1px solid #9CDCFE;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.home-buttons button:hover {
+  background-color: #9CDCFE;
+}
+
+.home-buttons a {
+  text-decoration: none;
   color: #9CDCFE;
   font-weight: 500;
-  font-size: 1rem;
-  transition: color 0.3s ease;
-  padding: 0.5rem 1rem;
-  text-align: center;
 }
 
-.nav-link:hover,
-.nav-link.active {
-  color: #ffffff;
+.home-buttons button:hover a {
+  color: #1e1e1e;
 }
 
-/* Mobile Modal Customizations */
-.modal-content {
-  background: linear-gradient(to right, #2c3e50, #1e1e1e);
-  border: none;
+@media (max-width: 768px) {
+  .home-title {
+    font-size: 2rem;
+    line-height: 2.6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .home-author {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+  }
+
+  blockquote {
+    font-size: 1rem;
+  }
+
+  .home-buttons {
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .home-content {
+    text-align: left; /* or center if you want it centered */
+  }
+
+  .home-title {
+    font-size: 2rem;
+    line-height: 2.6rem;
+    margin-bottom: 1.5rem;
+    word-break: break-word; /* prevent overflow */
+  }
 }
 
-.modal-header {
-  border-bottom: 1px solid #555;
+.no-wrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
+@media (max-width: 480px) {
+  .home-title {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+  }
 
-.modal-title {
-  font-size: 1.3rem;
-  font-weight: bold;
-}
-
-.modal-body .nav-item {
-  margin: 10px 0;
-}
-
-/* Hide modal on desktop */
-@media (min-width: 768px) {
-  #menuModal {
-    display: none !important;
+  .home-author {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
   }
 }
