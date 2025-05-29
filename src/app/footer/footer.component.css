@@ -75,3 +75,19 @@
     margin-bottom: 10px;
   }
 }
+.footer-note {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #AAAAAA;
+  margin-top: 6px;
+  flex: 100%;
+  text-align: left;
+}
+
+/* Mobile support */
+@media (max-width: 768px) {
+  .footer-note {
+    text-align: center;
+    margin-top: 10px;
+  }
+}

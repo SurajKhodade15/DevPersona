@@ -106,3 +106,32 @@ button a.a-green:hover {
     font-size: 1.3rem;
   }
 }
+
+.home-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.home-buttons button {
+  background-color: transparent;
+  border: 1px solid #9CDCFE;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.home-buttons button:hover {
+  background-color: #9CDCFE;
+}
+
+.home-buttons a {
+  text-decoration: none;
+  color: #9CDCFE;
+  font-weight: 500;
+}
+
+.home-buttons button:hover a {
+  color: #1e1e1e;
+}

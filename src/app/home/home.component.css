@@ -1,12 +1,22 @@
 .home-container {
-  padding: 30px 20px 40px; /* reduced top padding from 60px to 30px */
+  padding: 20px 20px 150px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #1e1e1e;
-  min-height: calc(100vh - 80px); /* still maintains full height minus navbar */
+  background-image:
+    linear-gradient(145deg, #000000 0%, #595961 100%),
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.03),
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 1px,
+      transparent 2px
+    );
+  background-size: cover;
+  min-height: calc(100vh - 80px);
 }
-
+  
 .home-content {
   max-width: 960px;
   text-align: start;
@@ -14,23 +24,18 @@
 }
 
 .home-title {
-  font-size: 3rem;
+  font-size: 2.5rem;
+  line-height: 3rem;
   color: #569CD6;
-  margin-bottom: 2rem;
-  line-height: 3.5rem;
+  margin-bottom: 1.2rem;
   font-weight: 700;
 }
 
 .home-author {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   color: #ffffff;
-  margin-bottom: 1.5rem;
-  line-height: 3rem;
-  font-weight: 500;
-}
-
-.author-name {
-  color: #ffffff;
+  margin-bottom: 1rem;
+  line-height: 2.4rem;
   font-weight: 500;
 }
 
@@ -39,7 +44,6 @@
   border-right: 2px solid #FFD700;
   padding-right: 6px;
   animation: blink-caret 0.7s step-end infinite;
-  font-weight: 500;
 }
 
 @keyframes blink-caret {
@@ -49,9 +53,22 @@
 
 blockquote {
   color: #D4D4D4;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-style: italic;
-  margin: 1.5rem 0;
+  margin: 1.2rem 0 0.8rem;
+}
+
+.home-paragraph {
+  color: #cfcfcf;
+  font-size: 1rem;
+  line-height: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.home-paragraph.highlight {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #9CDCFE;
 }
 
 .home-buttons {
@@ -83,44 +100,27 @@ blockquote {
   color: #1e1e1e;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
   .home-title {
     font-size: 2rem;
     line-height: 2.6rem;
-    margin-bottom: 1.5rem;
   }
 
   .home-author {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     line-height: 2.2rem;
   }
 
-  blockquote {
-    font-size: 1rem;
+  .home-paragraph {
+    font-size: 0.95rem;
   }
 
   .home-buttons {
     justify-content: center;
   }
 }
-@media (max-width: 768px) {
-  .home-content {
-    text-align: left; /* or center if you want it centered */
-  }
 
-  .home-title {
-    font-size: 2rem;
-    line-height: 2.6rem;
-    margin-bottom: 1.5rem;
-    word-break: break-word; /* prevent overflow */
-  }
-}
-
-.no-wrap {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
 @media (max-width: 480px) {
   .home-title {
     font-size: 1.6rem;
