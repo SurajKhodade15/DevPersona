@@ -1,4 +1,4 @@
-// node_modules/@angular/cdk/fesm2022/scrolling-BXVcIfjZ.mjs
+// ../node_modules/@angular/cdk/fesm2022/scrolling-BXVcIfjZ.mjs
 var RtlScrollAxisType;
 (function(RtlScrollAxisType2) {
   RtlScrollAxisType2[RtlScrollAxisType2["NORMAL"] = 0] = "NORMAL";
@@ -55,7 +55,7 @@ function getRtlScrollAxisType() {
   return rtlScrollAxisType;
 }
 
-// node_modules/@angular/cdk/fesm2022/test-environment-BgaaXvCA.mjs
+// ../node_modules/@angular/cdk/fesm2022/test-environment-BgaaXvCA.mjs
 function _isTestEnvironment() {
   return (
     // @ts-ignore
@@ -72,4 +72,4 @@ export {
   getRtlScrollAxisType,
   _isTestEnvironment
 };
-//# sourceMappingURL=chunk-SEJ6VUQM.js.map
+//# sourceMappingURL=chunk-CCIEFK2R.js.map
