@@ -4,9 +4,9 @@ import {
   ViewEncapsulation,
   setClassMetadata,
   ɵɵdefineComponent
-} from "./chunk-W6CC4APZ.js";
+} from "./chunk-MYVUR3ZO.js";
 
-// node_modules/@angular/material/fesm2022/structural-styles-B2ekkpE5.mjs
+// ../node_modules/@angular/material/fesm2022/structural-styles-B2ekkpE5.mjs
 var _StructuralStylesLoader = class __StructuralStylesLoader {
   static ɵfac = function _StructuralStylesLoader_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || __StructuralStylesLoader)();
@@ -39,4 +39,4 @@ var _StructuralStylesLoader = class __StructuralStylesLoader {
 export {
   _StructuralStylesLoader
 };
-//# sourceMappingURL=chunk-6NJ2RAJC.js.map
+//# sourceMappingURL=chunk-2LLN6A7Q.js.map

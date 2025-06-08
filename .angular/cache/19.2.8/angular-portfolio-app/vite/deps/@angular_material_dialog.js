@@ -3,7 +3,10 @@ import {
   _isTestEnvironment,
   getRtlScrollAxisType,
   supportsScrollBehavior
-} from "./chunk-SEJ6VUQM.js";
+} from "./chunk-CCIEFK2R.js";
+import {
+  coerceCssPixelValue
+} from "./chunk-3JBPAHK7.js";
 import {
   ArrayDataSource,
   BasePortalOutlet,
@@ -15,10 +18,7 @@ import {
   _RecycleViewRepeaterStrategy,
   _VIEW_REPEATER_STRATEGY,
   isDataSource
-} from "./chunk-FRNWQWI6.js";
-import {
-  coerceCssPixelValue
-} from "./chunk-SVVIGFXE.js";
+} from "./chunk-PBJCLPDE.js";
 import {
   A11yModule,
   ESCAPE,
@@ -36,15 +36,15 @@ import {
   coerceElement,
   coerceNumberProperty,
   hasModifierKey
-} from "./chunk-HHLVJGWR.js";
+} from "./chunk-IK2END27.js";
 import {
   BidiModule,
   Directionality
-} from "./chunk-7VXQYKQU.js";
+} from "./chunk-3CQNDAZY.js";
 import {
   DOCUMENT,
   Location
-} from "./chunk-RHW7O6XK.js";
+} from "./chunk-H7GY35K4.js";
 import {
   ANIMATION_MODULE_TYPE,
   ApplicationRef,
@@ -122,13 +122,13 @@ import {
   ɵɵstyleProp,
   ɵɵtemplate,
   ɵɵviewQuery
-} from "./chunk-W6CC4APZ.js";
+} from "./chunk-MYVUR3ZO.js";
 import {
   __spreadProps,
   __spreadValues
 } from "./chunk-WDMUDEB6.js";
 
-// node_modules/@angular/cdk/fesm2022/scrolling.mjs
+// ../node_modules/@angular/cdk/fesm2022/scrolling.mjs
 var _c0 = ["contentWrapper"];
 var _c1 = ["*"];
 var VIRTUAL_SCROLL_STRATEGY = new InjectionToken("VIRTUAL_SCROLL_STRATEGY");
@@ -1586,7 +1586,7 @@ var ScrollingModule = class _ScrollingModule {
   }], null, null);
 })();
 
-// node_modules/@angular/cdk/fesm2022/overlay-module-DVlnSjmr.mjs
+// ../node_modules/@angular/cdk/fesm2022/overlay-module-DVlnSjmr.mjs
 var scrollBehaviorSupported = supportsScrollBehavior();
 var BlockScrollStrategy = class {
   _viewportRuler;
@@ -4312,7 +4312,7 @@ var OverlayModule = class _OverlayModule {
   }], null, null);
 })();
 
-// node_modules/@angular/cdk/fesm2022/dialog.mjs
+// ../node_modules/@angular/cdk/fesm2022/dialog.mjs
 function CdkDialogContainer_ng_template_0_Template(rf, ctx) {
 }
 var DialogConfig = class {
@@ -5161,7 +5161,7 @@ var DialogModule = class _DialogModule {
   }], null, null);
 })();
 
-// node_modules/@angular/cdk/fesm2022/overlay.mjs
+// ../node_modules/@angular/cdk/fesm2022/overlay.mjs
 var FullscreenOverlayContainer = class _FullscreenOverlayContainer extends OverlayContainer {
   _renderer = inject(RendererFactory2).createRenderer(null, null);
   _fullScreenEventName;
@@ -5232,7 +5232,7 @@ var FullscreenOverlayContainer = class _FullscreenOverlayContainer extends Overl
   }], () => [], null);
 })();
 
-// node_modules/@angular/material/fesm2022/module-DNmichmx.mjs
+// ../node_modules/@angular/material/fesm2022/module-DNmichmx.mjs
 function MatDialogContainer_ng_template_2_Template(rf, ctx) {
 }
 var MatDialogConfig = class {
@@ -6152,7 +6152,7 @@ var MatDialogModule = class _MatDialogModule {
   }], null, null);
 })();
 
-// node_modules/@angular/material/fesm2022/dialog.mjs
+// ../node_modules/@angular/material/fesm2022/dialog.mjs
 var _defaultParams = {
   params: {
     enterAnimationDuration: "150ms",
