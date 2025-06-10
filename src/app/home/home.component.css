@@ -14,13 +14,40 @@
       transparent 2px
     );
   background-size: cover;
-  min-height: calc(100vh - 80px);
+  min-height: calc(100vh - 12%);
+  box-sizing: border-box;
 }
-  
+
 .home-content {
-  max-width: 960px;
+  max-width: 100%;
   text-align: start;
-  padding: 0 20px;
+  padding: 0 100px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+  .home-content {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    padding: 16px 8px 100px;
+  }
+  .home-content {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-container {
+    padding: 8px 25px 60px;
+    min-height: calc(100vh - 8%);
+  }
+  .home-content {
+    padding: 0 2px;
+  }
 }
 
 .home-title {
