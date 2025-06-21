@@ -20,6 +20,7 @@
     "@angular/platform-browser": "^19.2.7",
     "@angular/platform-browser-dynamic": "^19.2.7",
     "@angular/router": "^19.2.7",
+    "@vercel/analytics": "^1.5.0",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "rxjs": "~7.8.0",
