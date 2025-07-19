@@ -17,13 +17,17 @@ import { RouterLink } from '@angular/router';
 export class HomeComponent implements OnInit {
 
   dynamicText: string = "";
-  phrases: string[] =[
-    "Fullstack Developer.",
-    "Software Engineer.",
-    "Team Player.",
-    "Backend Engineer.",
-    "Code Enthusiast.",
+  phrases: string[] = [
+    "AI/ML Engineer.",
+    "GenAI Specialist.",
+    "Data Scientist.",
+    "Deep Learning Architect.",
+    "NLP & LLM Expert.",
+    "Cloud-Native AI Developer.",
+    ".NET Fullstack Engineer.",
   ];
+
+
 
   currentPhraseIndex: number = 0;
   currentCharIndex: number = 0;

@@ -1,13 +1,4 @@
 import {
-  RtlScrollAxisType,
-  _isTestEnvironment,
-  getRtlScrollAxisType,
-  supportsScrollBehavior
-} from "./chunk-SEJ6VUQM.js";
-import {
-  coerceCssPixelValue
-} from "./chunk-SVVIGFXE.js";
-import {
   ArrayDataSource,
   BasePortalOutlet,
   CdkPortalOutlet,
@@ -19,6 +10,15 @@ import {
   _VIEW_REPEATER_STRATEGY,
   isDataSource
 } from "./chunk-FRNWQWI6.js";
+import {
+  RtlScrollAxisType,
+  _isTestEnvironment,
+  getRtlScrollAxisType,
+  supportsScrollBehavior
+} from "./chunk-SEJ6VUQM.js";
+import {
+  coerceCssPixelValue
+} from "./chunk-SVVIGFXE.js";
 import {
   A11yModule,
   ESCAPE,
@@ -36,7 +36,7 @@ import {
   coerceElement,
   coerceNumberProperty,
   hasModifierKey
-} from "./chunk-HHLVJGWR.js";
+} from "./chunk-5NEDVGWB.js";
 import {
   BidiModule,
   Directionality
