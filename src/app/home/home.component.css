@@ -5,15 +5,16 @@
   align-items: center;
   background-color: #1e1e1e;
   background-image:
-    linear-gradient(145deg, #000000 0%, #595961 100%),
-    repeating-linear-gradient(
-      0deg,
+    linear-gradient(145deg, rgba(0, 0, 0, 0.7) 0%, rgba(89, 89, 97, 0.7) 100%),
+    repeating-linear-gradient(0deg,
       rgba(255, 255, 255, 0.03),
       rgba(255, 255, 255, 0.03) 1px,
       transparent 1px,
-      transparent 2px
-    );
+      transparent 2px),
+    url('../../assets/ai-banner.jpg');
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   min-height: calc(100vh - 12%);
   box-sizing: border-box;
 }
@@ -21,13 +22,18 @@
 .home-content {
   max-width: 100%;
   text-align: start;
-  padding: 0 100px;
+  padding: 40px 100px;
   box-sizing: border-box;
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
 @media (max-width: 1024px) {
   .home-content {
-    padding: 0 40px;
+    padding: 30px 40px;
   }
 }
 
@@ -35,27 +41,30 @@
   .home-container {
     padding: 16px 8px 100px;
   }
+
   .home-content {
-    padding: 0 10px;
+    padding: 25px 20px;
   }
 }
 
 @media (max-width: 480px) {
   .home-container {
-    padding: 8px 25px 60px;
+    padding: 8px 15px 60px;
     min-height: calc(100vh - 8%);
   }
+
   .home-content {
-    padding: 0 2px;
+    padding: 20px 15px;
   }
 }
 
 .home-title {
   font-size: 2.5rem;
   line-height: 3rem;
-  color: #569CD6;
+  color: #00D4FF;
   margin-bottom: 1.2rem;
   font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .home-author {
@@ -64,67 +73,142 @@
   margin-bottom: 1rem;
   line-height: 2.4rem;
   font-weight: 500;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 #dynamic-text {
-  color: #FFD700;
-  border-right: 2px solid #FFD700;
+  color: #00FF88;
+  border-right: 2px solid #00FF88;
   padding-right: 6px;
   animation: blink-caret 0.7s step-end infinite;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 @keyframes blink-caret {
-  from, to { border-color: transparent; }
-  50% { border-color: #FFD700; }
+
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: #00FF88;
+  }
 }
 
 blockquote {
-  color: #D4D4D4;
-  font-size: 1.05rem;
+  color: #E8E8E8;
+  font-size: 1.2rem;
   font-style: italic;
-  margin: 1.2rem 0 0.8rem;
+  margin: 1.5rem 0 1rem;
+  background: rgba(0, 212, 255, 0.1);
+  padding: 1.2rem 1.8rem;
+  border-left: 4px solid #00D4FF;
+  border-radius: 8px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  border-top: 1px solid rgba(0, 212, 255, 0.2);
+  border-bottom: 1px solid rgba(0, 212, 255, 0.2);
 }
 
 .home-paragraph {
-  color: #cfcfcf;
-  font-size: 1rem;
-  line-height: 1.6rem;
-  margin-bottom: 1rem;
+  color: #E8E8E8;
+  font-size: 1.2rem;
+  font-style: italic;
+  margin: 1.5rem 0 1rem;
+  background: rgba(0, 212, 255, 0.1);
+  padding: 1.2rem 1.8rem;
+  border-left: 4px solid #00D4FF;
+  border-radius: 8px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  border-top: 1px solid rgba(0, 212, 255, 0.2);
+  border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.home-paragraph:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
 }
 
 .home-paragraph.highlight {
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: #9CDCFE;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #cc1a1a;
+  background: linear-gradient(135deg, rgba(0, 255, 136, 0.15), rgba(0, 212, 255, 0.1));
+  border: 2px solid #717bd4;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 4px 20px rgba(0, 255, 136, 0.2);
+  margin: 2rem 0;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 4px 20px rgba(0, 255, 136, 0.2);
+  }
+
+  to {
+    box-shadow: 0 4px 30px rgba(0, 255, 136, 0.4);
+  }
 }
 
 .home-buttons {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
+  justify-content: center;
 }
 
 .home-buttons button {
-  background-color: transparent;
-  border: 1px solid #9CDCFE;
-  padding: 0.6rem 1.2rem;
-  border-radius: 6px;
-  transition: background 0.3s ease;
+  background: linear-gradient(145deg, rgba(0, 212, 255, 0.2), rgba(0, 255, 136, 0.15));
+  border: 2px solid #00D4FF;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 6px 20px rgba(0, 212, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.home-buttons button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.home-buttons button:hover::before {
+  left: 100%;
 }
 
 .home-buttons button:hover {
-  background-color: #9CDCFE;
+  background: linear-gradient(145deg, #00D4FF, #00FF88);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 12px 35px rgba(0, 212, 255, 0.5);
+  border-color: #00FF88;
 }
 
 .home-buttons a {
   text-decoration: none;
-  color: #9CDCFE;
-  font-weight: 500;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  position: relative;
+  z-index: 1;
 }
 
 .home-buttons button:hover a {
-  color: #1e1e1e;
+  color: #000000;
+  text-shadow: none;
 }
 
 /* Responsive */
@@ -140,11 +224,22 @@ blockquote {
   }
 
   .home-paragraph {
-    font-size: 0.95rem;
+    font-size: 1rem;
+    padding: 0.8rem 1.2rem;
   }
 
   .home-buttons {
     justify-content: center;
+    gap: 1rem;
+  }
+
+  .home-buttons button {
+    padding: 0.8rem 1.5rem;
+  }
+
+  blockquote {
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
   }
 }
 
@@ -157,5 +252,30 @@ blockquote {
   .home-author {
     font-size: 1.3rem;
     line-height: 1.8rem;
+  }
+
+  .home-paragraph {
+    font-size: 0.95rem;
+    padding: 0.8rem 1rem;
+  }
+
+  .home-paragraph.highlight {
+    font-size: 1.1rem;
+    padding: 1.2rem 1.5rem;
+  }
+
+  .home-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-buttons button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  blockquote {
+    font-size: 0.95rem;
+    padding: 1rem;
   }
 }

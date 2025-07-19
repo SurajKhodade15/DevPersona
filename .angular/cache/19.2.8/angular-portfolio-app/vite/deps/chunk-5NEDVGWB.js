@@ -3254,6 +3254,9 @@ var MatCommonModule = class _MatCommonModule {
 })();
 
 export {
+  coerceNumberProperty,
+  coerceElement,
+  coerceArray,
   isFakeMousedownFromScreenReader,
   isFakeTouchstartFromScreenReader,
   BACKSPACE,
@@ -3269,12 +3272,9 @@ export {
   _bindEventWithOptions,
   Platform,
   normalizePassiveListenerOptions,
-  coerceNumberProperty,
-  coerceElement,
   FocusMonitor,
   _CdkPrivateStyleLoader,
   _VisuallyHiddenLoader,
-  coerceArray,
   InteractivityChecker,
   FocusTrapFactory,
   A11yModule,
@@ -3283,4 +3283,4 @@ export {
   FocusKeyManager,
   MatCommonModule
 };
-//# sourceMappingURL=chunk-HHLVJGWR.js.map
+//# sourceMappingURL=chunk-5NEDVGWB.js.map
