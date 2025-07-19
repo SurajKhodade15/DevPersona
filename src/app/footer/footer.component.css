@@ -1,14 +1,28 @@
 @import '../../styles.css';
 
 .footer {
-  background: linear-gradient(to right, #2c3e50, #1e1e1e); /* Match header gradient */
-  border-top: 2px solid #888d88;
-  padding: 20px 0;
-  color: #9CDCFE;
-  
-  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(20px);
+  border-top: 2px solid rgba(0, 212, 255, 0.3);
+  padding: 30px 0;
+  color: #ffffff;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
   position: relative;
   z-index: 1020;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg,
+      rgba(0, 212, 255, 0.05) 0%,
+      rgba(0, 255, 136, 0.05) 50%,
+      rgba(0, 212, 255, 0.05) 100%);
+  pointer-events: none;
 }
 
 .footer-content {
@@ -16,52 +30,150 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
 }
 
-.footer p {
-  margin: 0;
-  font-size: 0.9rem;
+.footer-main {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-copyright {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #F5F5F5;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.footer-name {
+  color: #00D4FF;
+  font-weight: 600;
+}
+
+.footer-note {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #00FF88;
+  margin: 0;
+  opacity: 0.9;
 }
 
 .footer-icons {
   display: flex;
-  gap: 15px;
+  gap: 20px;
+  align-items: center;
 }
 
-.footer-icons a {
-  color: #C586C0;
-  font-size: 1.3rem;
-  transition: color 0.3s ease;
+.footer-icon {
+  color: #ffffff;
+  font-size: 1.4rem;
+  transition: all 0.4s ease;
   position: relative;
   text-decoration: none;
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
 }
 
-.footer-icons a::after {
+.footer-icon::before {
   content: '';
   position: absolute;
-  width: 0;
-  height: 2px;
-  display: block;
-  margin-top: 5px;
-  right: 0;
-  background: #00FF00;
-  transition: width 0.3s ease;
-}
-
-.footer-icons a:hover::after {
+  top: 0;
+  left: -100%;
   width: 100%;
-  left: 0;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.3), transparent);
+  transition: left 0.5s;
 }
 
-.footer-icons a:hover,
-.footer-icons a:active {
+.footer-icon:hover::before {
+  left: 100%;
+}
+
+.footer-icon i {
+  position: relative;
+  z-index: 1;
+  font-size: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.footer-icon:hover {
+  color: #00D4FF;
+  background: rgba(0, 212, 255, 0.15);
+  border-color: #00D4FF;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 212, 255, 0.3);
+}
+
+/* Icon-specific colors */
+.footer-icon:nth-child(1):hover {
+  /* LinkedIn */
+  color: #0077B5;
+  border-color: #0077B5;
+  box-shadow: 0 6px 20px rgba(0, 119, 181, 0.3);
+}
+
+.footer-icon:nth-child(2):hover {
+  /* GitHub */
   color: #ffffff;
+  border-color: #ffffff;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
 }
 
-.fab,
-.fas {
-  font-size: 24px;
+.footer-icon:nth-child(3):hover {
+  /* Email */
+  color: #00FF88;
+  border-color: #00FF88;
+  box-shadow: 0 6px 20px rgba(0, 255, 136, 0.3);
+}
+
+.footer-icon:nth-child(4):hover {
+  /* Xing */
+  color: #006567;
+  border-color: #006567;
+  box-shadow: 0 6px 20px rgba(0, 101, 103, 0.3);
+}
+
+/* Tooltip */
+.icon-tooltip {
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.9);
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+}
+
+.icon-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: rgba(0, 0, 0, 0.9);
+}
+
+.footer-icon:hover .icon-tooltip {
+  opacity: 1;
+  visibility: visible;
+  bottom: 110%;
 }
 
 /* Mobile responsiveness */
@@ -69,25 +181,116 @@
   .footer-content {
     flex-direction: column;
     text-align: center;
+    gap: 20px;
   }
 
-  .footer p {
-    margin-bottom: 10px;
-  }
-}
-.footer-note {
-  font-size: 0.8rem;
-  font-style: italic;
-  color: #FFFF;
-  margin-top: 6px;
-  flex: 100%;
-  text-align: left;
-}
-
-/* Mobile support */
-@media (max-width: 768px) {
-  .footer-note {
+  .footer-main {
+    order: 2;
     text-align: center;
-    margin-top: 10px;
+  }
+
+  .footer-icons {
+    order: 1;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .footer-icon {
+    padding: 10px;
+    font-size: 1.2rem;
+  }
+
+  .footer-icon i {
+    font-size: 18px;
+  }
+
+  .footer-copyright {
+    font-size: 0.9rem;
+  }
+
+  .footer-note {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 20px 0;
+  }
+
+  .footer-content {
+    gap: 15px;
+  }
+
+  .footer-icons {
+    gap: 12px;
+  }
+
+  .footer-icon {
+    padding: 8px;
+    font-size: 1.1rem;
+  }
+
+  .footer-icon i {
+    font-size: 16px;
+  }
+
+  .footer-copyright {
+    font-size: 0.85rem;
+  }
+
+  .footer-note {
+    font-size: 0.75rem;
+  }
+}
+
+/* Animation for footer icons */
+.footer-icon {
+  animation: slideInUp 0.6s ease-out;
+  animation-fill-mode: both;
+}
+
+.footer-icon:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.footer-icon:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.footer-icon:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.footer-icon:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Loading animation for footer content */
+.footer-main {
+  animation: fadeInLeft 0.8s ease-out;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
