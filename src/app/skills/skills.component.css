@@ -22,7 +22,7 @@
 
 /* Content Container */
 .skills-content {
-  max-width: 1200px;
+  max-width: 2000px;
   width: 100%;
   backdrop-filter: blur(15px);
   background: rgba(0, 0, 0, 0.6);

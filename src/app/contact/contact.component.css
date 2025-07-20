@@ -1,165 +1,286 @@
 @import '../../styles.css';
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 .default-container {
-  background-color: #1e1e1e;
   min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+    url('../../assets/ai-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px 20px;
-  font-family: 'Fira Code', 'Courier New', monospace;
+  padding: 80px 20px;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  position: relative;
+}
+
+.default-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg,
+      rgba(0, 212, 255, 0.1) 0%,
+      rgba(0, 255, 136, 0.05) 50%,
+      rgba(0, 212, 255, 0.1) 100%);
+  pointer-events: none;
 }
 
 .contact-card {
-  max-width: 700px;
+  max-width: 800px;
   width: 100%;
-  background-color: #252526;
-  border: 2px solid #3c3c3c;
-  padding: 60px 30px;
-  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(0, 212, 255, 0.3);
+  padding: 60px 40px;
+  border-radius: 20px;
   text-align: center;
-  color: #d4d4d4;
-  box-shadow: 0 0 15px rgba(0, 255, 0, 0.1);
+  color: #F5F5F5;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg,
+      rgba(0, 212, 255, 0.05) 0%,
+      rgba(0, 255, 136, 0.03) 50%,
+      rgba(0, 212, 255, 0.05) 100%);
+  border-radius: 20px;
+  pointer-events: none;
+  z-index: -1;
 }
 
 .contact-image {
-  width: 220px;
-  height: 220px;
+  width: 240px;
+  height: 240px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #3c3c3c;
+  border: 4px solid rgba(0, 212, 255, 0.4);
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-image:hover {
+  transform: scale(1.05);
+  border-color: #00D4FF;
+  box-shadow: 0 0 40px rgba(0, 212, 255, 0.5);
 }
 
 .contact-title {
-  font-size: 3rem;
-  font-weight: 600;
-  color: #DCDCAA;
+  font-size: 3.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #00D4FF 0%, #00FF88 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin: 0;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  text-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+  letter-spacing: -1px;
+  position: relative;
+  z-index: 2;
 }
 
 .white-highlight {
-  color: #DCDCAA;
+  color: #00D4FF;
+  text-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
 }
 
 .default-highlight {
-  font-size: 1.5rem;
-  color: #569CD6;
-  font-weight: 600;
+  font-size: 1.8rem;
+  color: #00FF88;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 10px 0;
+  text-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
+  position: relative;
+  z-index: 2;
 }
 
 .contact-paragraph {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   line-height: 1.8;
-  color: #9CDCFE;
-  margin: 1rem 0 1.5rem;
-  padding: 0 15px;
-  max-width: 640px;
+  color: #F5F5F5;
+  margin: 1.5rem 0 2rem;
+  padding: 0 20px;
+  max-width: 700px;
   text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  position: relative;
+  z-index: 2;
 }
 
 .contact-info {
-  color: #cccccc;
-  font-family: 'Fira Code', monospace;
-  font-size: 0.95rem;
-  line-height: 1.6;
+  color: #F5F5F5;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
   text-align: center;
+  position: relative;
+  z-index: 2;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 .contact-info i {
-  margin-right: 8px;
-  color: #00FF00;
+  margin-right: 12px;
+  color: #00D4FF;
+  font-size: 1.2rem;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
 }
 
 .contact-info a {
-  color: #9CDCFE;
+  color: #00FF88;
   text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
 .contact-info a:hover {
-  text-decoration: underline;
+  color: #00D4FF;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
 }
 
 .media-icons {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
   flex-wrap: wrap;
+  margin: 20px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.media-icon {
+  position: relative;
 }
 
 .media-icon i {
-  font-size: 2.2rem;
-  color: #C586C0;
-  transition: color 0.3s ease;
-  position: relative;
+  font-size: 2.8rem;
+  color: #00D4FF;
+  transition: all 0.4s ease;
+  text-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
 }
 
 .media-icons a {
-  color: #C586C0;
-  transition: color 0.3s ease;
+  color: #00D4FF;
+  transition: all 0.4s ease;
   position: relative;
   text-decoration: none;
+  display: block;
+  padding: 15px;
+  border-radius: 50%;
+  background: rgba(0, 212, 255, 0.1);
+  border: 2px solid rgba(0, 212, 255, 0.3);
+  backdrop-filter: blur(10px);
 }
 
-.media-icons a::after {
+.media-icons a::before {
   content: '';
   position: absolute;
+  top: 50%;
+  left: 50%;
   width: 0;
-  height: 2px;
-  bottom: -4px;
-  left: 0;
-  background-color: #00FF00;
-  transition: width 0.3s ease;
+  height: 0;
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.3), transparent);
+  border-radius: 50%;
+  transition: all 0.4s ease;
+  transform: translate(-50%, -50%);
+  z-index: -1;
 }
 
-.media-icons a:hover::after {
-  width: 100%;
+.media-icons a:hover::before {
+  width: 80px;
+  height: 80px;
 }
 
-.media-icons a:hover,
-.media-icons a:active {
-  color: #ffffff;
+.media-icons a:hover {
+  color: #00FF88;
+  border-color: #00FF88;
+  background: rgba(0, 255, 136, 0.15);
+  transform: translateY(-8px) scale(1.1);
+  box-shadow: 0 15px 35px rgba(0, 212, 255, 0.3);
+}
+
+.media-icons a:hover i {
+  color: #00FF88;
+  text-shadow: 0 0 20px rgba(0, 255, 136, 0.6);
+  transform: scale(1.2);
 }
 
 .contact-actions {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.5rem;
+  margin-top: 20px;
+  position: relative;
+  z-index: 2;
 }
 
 .contact-button {
-  background-color: transparent;
-  border: 2px solid #00FF00;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-family: 'Fira Code', monospace;
+  background: rgba(0, 212, 255, 0.1);
+  border: 2px solid #00D4FF;
+  padding: 15px 30px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-family: 'Inter', sans-serif;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+.contact-button:hover::before {
+  left: 100%;
 }
 
 .contact-button:hover {
-  background-color: #1e1e1e;
-  transform: scale(1.05);
-  color: #ffffff;
-  border-color: #00FF00;
+  background: rgba(0, 212, 255, 0.2);
+  border-color: #00FF88;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 212, 255, 0.4);
 }
 
 .contact-button a {
-  color: #00FF00;
+  color: #00D4FF;
   font-weight: 600;
   text-decoration: none;
+  position: relative;
+  z-index: 1;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
 
 .contact-button:hover a {
-  color: #ffffff;
+  color: #00FF88;
 }
 
 /* ============================
@@ -167,15 +288,77 @@
    ============================ */
 @media (max-width: 768px) {
   .default-container {
-    padding: 20px 10px;
+    padding: 40px 15px;
+    background-attachment: scroll;
   }
 
   .contact-card {
-    padding: 40px 20px;
+    padding: 40px 25px;
+    border-radius: 15px;
+    gap: 20px;
   }
 
   .contact-title {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
+    letter-spacing: -0.5px;
+  }
+
+  .default-highlight {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+  }
+
+  .contact-paragraph {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    padding: 0 10px;
+    margin: 1rem 0 1.5rem;
+  }
+
+  .contact-info {
+    font-size: 1rem;
+  }
+
+  .contact-image {
+    width: 180px;
+    height: 180px;
+    border-width: 3px;
+  }
+
+  .contact-button {
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+
+  .media-icon i {
+    font-size: 2.2rem;
+  }
+
+  .media-icons a {
+    padding: 12px;
+  }
+
+  .media-icons {
+    gap: 20px;
+  }
+
+  .contact-actions {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .default-container {
+    padding: 30px 10px;
+  }
+
+  .contact-card {
+    padding: 30px 20px;
+    gap: 15px;
+  }
+
+  .contact-title {
+    font-size: 2rem;
   }
 
   .default-highlight {
@@ -183,28 +366,90 @@
   }
 
   .contact-paragraph {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    padding: 0 10px;
-    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5;
   }
 
   .contact-info {
-    font-size: 0.85rem;
-    text-align: center;
+    font-size: 0.95rem;
   }
 
   .contact-image {
-    width: 160px;
-    height: 160px;
+    width: 150px;
+    height: 150px;
   }
 
   .contact-button {
-    font-size: 0.9rem;
-    padding: 8px 16px;
+    font-size: 0.95rem;
+    padding: 10px 18px;
   }
 
   .media-icon i {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
+
+  .media-icons a {
+    padding: 10px;
+  }
+
+  .media-icons {
+    gap: 15px;
+  }
+
+  .contact-actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .contact-button {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+/* Animation Effects */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contact-card>* {
+  animation: fadeInUp 0.6s ease-out;
+  animation-fill-mode: both;
+}
+
+.contact-image {
+  animation-delay: 0.1s;
+}
+
+.contact-title {
+  animation-delay: 0.2s;
+}
+
+.default-highlight {
+  animation-delay: 0.3s;
+}
+
+.contact-info {
+  animation-delay: 0.4s;
+}
+
+.media-icons {
+  animation-delay: 0.5s;
+}
+
+.contact-paragraph {
+  animation-delay: 0.6s;
+}
+
+.contact-actions {
+  animation-delay: 0.7s;
 }
