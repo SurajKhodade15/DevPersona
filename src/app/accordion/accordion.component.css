@@ -1,7 +1,6 @@
 /* Standardized Main Container */
 .accordion-container {
   min-height: calc(100vh - 72px);
-  /* Account for header height */
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
     url('../../assets/ai-banner.jpg');
   background-size: cover;
@@ -65,94 +64,145 @@
   width: 100%;
 }
 
-/* AI Panel Styling */
-.ai-panel {
-  margin-bottom: 20px !important;
-  background: rgba(0, 0, 0, 0.6) !important;
-  border-radius: 12px !important;
-  border: 1px solid rgba(0, 212, 255, 0.3) !important;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
-  transition: all 0.4s ease !important;
+/* Custom Accordion Styling */
+.custom-accordion-item {
+  margin-bottom: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  overflow: hidden;
+  transition: all 0.3s ease;
   backdrop-filter: blur(10px);
 }
 
-.ai-panel:hover {
-  border-color: rgba(0, 212, 255, 0.5) !important;
-  box-shadow: 0 6px 25px rgba(0, 212, 255, 0.2) !important;
-  transform: translateY(-2px);
+.custom-accordion-item:hover {
+  border-color: rgba(0, 212, 255, 0.5);
+  box-shadow: 0 6px 25px rgba(0, 212, 255, 0.2);
 }
 
-/* Panel Headers */
-.ai-panel mat-expansion-panel-header {
-  padding: 20px 25px !important;
-  font-weight: 600 !important;
-  font-size: 1.1rem !important;
-  background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(0, 255, 136, 0.05)) !important;
-  color: #00D4FF !important;
-  border-radius: 12px 12px 0 0 !important;
+.custom-accordion-header {
+  padding: 20px 25px;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(0, 255, 136, 0.05));
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.custom-accordion-header:hover {
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(0, 255, 136, 0.08));
+}
+
+.custom-accordion-title {
+  color: #00D4FF;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-  transition: all 0.3s ease !important;
+  background: linear-gradient(135deg, #00D4FF 0%, #00FF88 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.ai-panel mat-expansion-panel-header:hover {
-  background: linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(0, 255, 136, 0.08)) !important;
+.custom-accordion-icon {
+  color: #00D4FF;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+  min-width: 20px;
+  text-align: center;
 }
 
-.ai-panel.mat-expanded mat-expansion-panel-header {
-  background: linear-gradient(135deg, rgba(0, 255, 136, 0.15), rgba(0, 212, 255, 0.1)) !important;
-  color: #00FF88 !important;
+.custom-accordion-icon.expanded {
+  transform: rotate(180deg);
+  color: #00FF88;
 }
 
-/* Nested Panels */
-.nested-panel {
-  margin: 10px 0 !important;
-  background: rgba(255, 255, 255, 0.03) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  border-radius: 8px !important;
+.custom-accordion-icon.small {
+  font-size: 1rem;
+  min-width: 16px;
 }
 
-.nested-panel mat-expansion-panel-header {
-  padding: 15px 20px !important;
-  background: rgba(255, 255, 255, 0.05) !important;
-  color: #F5F5F5 !important;
-  font-size: 1rem !important;
+.custom-accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  background: rgba(0, 0, 0, 0.3);
 }
 
-/* Panel Titles */
-mat-panel-title {
-  color: inherit !important;
-  font-weight: 600 !important;
-  line-height: 1.4 !important;
-  word-break: break-word !important;
+.custom-accordion-content.show {
+  max-height: 2000px;
+  padding-bottom: 20px;
 }
 
-/* Accordion Text Content */
+/* Experience Items */
+.experience-item {
+  margin: 15px 0;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.experience-header {
+  padding: 15px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.experience-header:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.experience-title {
+  color: #F5F5F5;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.experience-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.2s ease;
+}
+
+.experience-content.show {
+  max-height: 1000px;
+  padding-bottom: 15px;
+}
+
+/* Text Content */
 .accordion-text {
-  padding: 25px 30px !important;
-  line-height: 1.7 !important;
-  font-size: 1rem !important;
-  color: #F5F5F5 !important;
-  background: rgba(255, 255, 255, 0.02);
+  padding: 25px 30px;
+  line-height: 1.7;
+  font-size: 1rem;
+  color: #F5F5F5;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
 
-/* AI Highlights */
 .ai-highlight {
-  color: #00FF88 !important;
-  font-weight: 600 !important;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8) !important;
+  color: #00FF88;
+  font-weight: 600;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
-/* Experience Text */
 .ai-exp-text {
-  color: #00D4FF !important;
-  font-size: 1rem !important;
-  font-weight: 500 !important;
-  margin-bottom: 15px !important;
-  padding: 8px 15px !important;
-  background: rgba(0, 212, 255, 0.1) !important;
-  border-radius: 6px !important;
-  border-left: 3px solid #00D4FF !important;
+  color: #00D4FF;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+  padding: 8px 15px;
+  background: rgba(0, 212, 255, 0.1);
+  border-radius: 6px;
+  border-left: 3px solid #00D4FF;
 }
 
 /* Enhanced Tech Board */
@@ -177,6 +227,7 @@ mat-panel-title {
   border-radius: 10px;
   transition: all 0.4s ease;
   backdrop-filter: blur(5px);
+  min-height: 60px;
 }
 
 .tech-cell:hover {
@@ -187,7 +238,7 @@ mat-panel-title {
 }
 
 .tech-cell i {
-  font-size: 2.5rem !important;
+  font-size: 2.5rem;
   transition: all 0.3s ease;
 }
 
@@ -224,119 +275,18 @@ mat-panel-title {
 
 /* Lists */
 ul {
-  padding-left: 25px !important;
-  margin: 15px 0 !important;
+  padding-left: 25px;
+  margin: 15px 0;
 }
 
 li {
-  margin-bottom: 12px !important;
-  color: #F5F5F5 !important;
-  line-height: 1.6 !important;
+  margin-bottom: 12px;
+  color: #F5F5F5;
+  line-height: 1.6;
 }
 
 li::marker {
   color: #00D4FF;
-}
-
-@media (max-width: 768px) {
-  .tech-board {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .tech-cell {
-    margin: 10px 0;
-  }
-}
-
-.tech-cell i {
-  transition: transform 0.2s ease;
-}
-
-.tech-cell:hover i {
-  transform: scale(1.2);
-}
-
-mat-panel-title.exp {
-  white-space: normal !important;
-  word-wrap: break-word;
-  overflow-wrap: break-word
-}
-
-@media (max-width: 768px) {
-  mat-panel-title.exp {
-    font-size: 0.9rem !important;
-  }
-
-  mat-expansion-panel-header {
-    padding: 12px 15px;
-  }
-}
-
-@media (max-width: 768px) {
-  .tech-board {
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-  }
-
-  .tech-cell {
-    margin: 10px;
-    font-size: 2rem;
-  }
-
-  .tech-cell i {
-    font-size: 2.5rem;
-  }
-}
-
-::ng-deep .mat-expansion-indicator {
-  display: none;
-}
-
-/* VS Code Dark theme-compatible arrow icon */
-mat-expansion-panel-header::after {
-  content: '⌄';
-  /* Downward arrow */
-  color: #9CDCFE;
-  /* VS Code light blue for icons/text */
-  font-size: 16px;
-  margin-left: auto;
-  transition: transform 0.3s ease, color 0.3s ease;
-  display: inline-block;
-  transform: rotate(0deg);
-}
-
-/* Rotate arrow when panel is expanded */
-mat-expansion-panel.mat-expanded mat-expansion-panel-header::after {
-  transform: rotate(180deg);
-  color: #4FC1FF;
-  /* Slightly brighter blue when active */
-}
-
-::ng-deep mat-expansion-panel-header {
-  align-items: flex-start !important;
-  padding: 12px !important;
-  min-height: unset !important;
-  white-space: normal !important;
-  line-height: 1.5 !important;
-  display: flex !important;
-  /* Revert back to flex */
-  flex-wrap: wrap;
-  /* Allow text wrapping */
-}
-
-::ng-deep mat-panel-title {
-  white-space: normal !important;
-  line-height: 1.5 !important;
-  overflow: visible !important;
-  word-break: break-word !important;
-  flex: 1 1 100%;
-  /* Make title take full width */
-  font-size: 0.95rem;
-}
-
-::ng-deep mat-expansion-indicator {
-  align-self: center;
-  margin-left: auto;
 }
 
 /* Responsive Design */
@@ -344,6 +294,12 @@ mat-expansion-panel.mat-expanded mat-expansion-panel-header::after {
   .accordion-content {
     padding: 50px 40px;
     max-width: 1200px;
+  }
+
+  .tech-board {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    padding: 20px;
   }
 }
 
@@ -359,33 +315,51 @@ mat-expansion-panel.mat-expanded mat-expansion-panel-header::after {
     border-radius: 15px;
   }
 
-  mat-expansion-panel-header {
-    min-height: 64px !important;
-    padding: 16px 20px !important;
+  .custom-accordion-header {
+    padding: 15px 20px;
   }
 
-  mat-panel-title {
-    font-size: 1rem !important;
-    line-height: 1.4 !important;
+  .custom-accordion-title {
+    font-size: 1.1rem;
+    line-height: 1.3;
+  }
+
+  .custom-accordion-icon {
+    font-size: 1rem;
+  }
+
+  .accordion-text {
+    padding: 20px 25px;
+    font-size: 0.95rem;
   }
 
   .tech-board {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    padding: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 15px;
   }
 
   .tech-cell {
     padding: 12px;
+    min-height: 50px;
   }
 
   .tech-cell i {
-    font-size: 2rem !important;
+    font-size: 2rem;
   }
 
-  .accordion-text {
-    padding: 20px 25px !important;
-    font-size: 0.95rem !important;
+  .experience-header {
+    padding: 12px 16px;
+  }
+
+  .experience-title {
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+
+  .ai-exp-text {
+    font-size: 0.95rem;
+    padding: 6px 12px;
   }
 }
 
@@ -398,59 +372,70 @@ mat-expansion-panel.mat-expanded mat-expansion-panel-header::after {
     padding: 30px 20px;
   }
 
-  mat-expansion-panel-header {
-    min-height: 56px !important;
-    padding: 12px 16px !important;
+  .custom-accordion-header {
+    padding: 12px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
   }
 
-  mat-panel-title {
-    font-size: 0.95rem !important;
-    line-height: 1.3 !important;
+  .custom-accordion-title {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+
+  .custom-accordion-icon {
+    font-size: 0.9rem;
+    align-self: flex-end;
+  }
+
+  .accordion-text {
+    padding: 15px 20px;
+    font-size: 0.9rem;
   }
 
   .tech-board {
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    padding: 15px;
+    gap: 8px;
+    padding: 12px;
   }
 
   .tech-cell {
     padding: 10px;
+    min-height: 45px;
   }
 
   .tech-cell i {
-    font-size: 1.8rem !important;
+    font-size: 1.8rem;
   }
 
-  .accordion-text {
-    padding: 15px 20px !important;
-    font-size: 0.9rem !important;
+  .experience-header {
+    padding: 10px 14px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .experience-title {
+    font-size: 0.95rem;
+    line-height: 1.2;
+  }
+
+  .experience-content.show {
+    max-height: 800px;
   }
 
   .ai-exp-text {
-    font-size: 0.95rem !important;
-    padding: 6px 12px !important;
+    font-size: 0.9rem;
+    padding: 5px 10px;
   }
-}
 
-/* Panel Header Override Styles */
-mat-expansion-panel-header {
-  padding-top: 12px !important;
-  padding-bottom: 12px !important;
-  min-height: 56px !important;
-  align-items: center;
-}
+  ul {
+    padding-left: 20px;
+  }
 
-mat-panel-title {
-  font-size: 1rem;
-  line-height: 1.4;
-  word-break: break-word;
-}
-
-.default-exp-text {
-  color: #FFD700;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
+  li {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+  }
 }
