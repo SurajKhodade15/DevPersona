@@ -133,12 +133,15 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  align-items: center;
+  gap: 8px;
   margin-top: 20px;
+  padding: 10px 0;
+  min-height: 40px;
 }
 
 .tag {
-  padding: 6px 12px;
+  padding: 8px 14px;
   border-radius: 8px;
   color: #fff;
   font-size: 0.85rem;
@@ -147,6 +150,11 @@
   backdrop-filter: blur(5px);
   transition: all 0.3s ease;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  min-height: 30px;
 }
 
 .tag:hover {
@@ -179,7 +187,8 @@
 
   .tag {
     font-size: 0.8rem;
-    padding: 5px 10px;
+    padding: 6px 10px;
+    min-height: 28px;
   }
 }
 
@@ -203,11 +212,13 @@
   }
 
   .tags-container {
-    gap: 8px;
+    gap: 6px;
+    margin-top: 15px;
   }
 
   .tag {
     font-size: 0.75rem;
-    padding: 4px 8px;
+    padding: 5px 8px;
+    min-height: 26px;
   }
 }
