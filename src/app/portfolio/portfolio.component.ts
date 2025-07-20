@@ -15,153 +15,175 @@ export class PortfolioComponent {
   projects: Card[] = [
     {
       id: 1,
-      name: 'EY Payroll Platform',
-      summary: 'Enterprise payroll system built with .NET Core microservices and Angular.',
-      description: 'Designed and developed a scalable enterprise payroll system using .NET Core microservices and Angular 16. Implemented secure communication between services using Azure Service Bus and RabbitMQ. Used Entity Framework Core for persistence and SQL Server for structured data storage. The solution supports high-volume processing, audit logging, and role-based access control, and was deployed using CI/CD pipelines on Azure DevOps.',
-      projectLink: 'https://github.com/SurajK221b/ey-payroll',
+      name: 'Medical Diagnosis AI System',
+      summary: 'Deep learning model for automated medical image analysis and disease detection.',
+      description: 'Developed a comprehensive medical diagnosis system using TensorFlow and PyTorch for analyzing medical images (X-rays, CT scans, MRI). Implemented convolutional neural networks with attention mechanisms for early detection of pneumonia, fractures, and tumors. Achieved 94% accuracy through transfer learning with ResNet and EfficientNet. Deployed using Azure ML Studio with real-time inference APIs. Integrated DICOM image processing and HIPAA-compliant data handling.',
+      projectLink: 'https://github.com/SurajK221b/medical-ai-diagnosis',
       tags: [
-        Tag.DOTNETCORE,
-        Tag.EFCORE,
-        Tag.MICROSERVICES,
-        Tag.ANGULAR,
-        Tag.TYPESCRIPT,
-        Tag.SQLSERVER,
-        Tag.RABBITMQ,
+        Tag.PYTHON,
+        Tag.TENSORFLOW,
+        Tag.PYTORCH,
+        Tag.OPENCV,
         Tag.AZURE,
-        Tag.SERVICEBUS,
-        Tag.AZUREDEVOPS
+        Tag.MACHINELEARNING,
+        Tag.DEEPLEARNING,
+        Tag.RESTAPI
       ]
     },
     {
       id: 2,
-      name: 'CentriCT–PGS Integration',
-      summary: 'Data integration APIs using .NET Core and Azure Functions.',
-      description: 'Built secure RESTful APIs using .NET Core and Azure Functions to synchronize Microsoft CentriCT data with internal systems. Designed scheduled triggers, data transformation, and retry mechanisms. Automated high-volume data flows to reduce manual work and ensure operational continuity, with version-controlled deployment pipelines in Azure DevOps.',
-      projectLink: 'https://github.com/SurajK221b/centrict-integration',
+      name: 'Healthcare Predictive Analytics',
+      summary: 'ML pipeline for patient outcome prediction and risk assessment.',
+      description: 'Built a comprehensive healthcare analytics platform using Python, scikit-learn, and Azure ML. Developed predictive models for patient readmission risk, treatment outcome forecasting, and resource allocation optimization. Implemented feature engineering for EHR data, time-series analysis for vital signs, and ensemble methods achieving 91% accuracy. Created HIPAA-compliant data pipelines with automated model retraining and monitoring dashboards.',
+      projectLink: 'https://github.com/SurajK221b/healthcare-ml',
       tags: [
-        Tag.DOTNETCORE,
-        Tag.SQLSERVER,
-        Tag.RESTAPI,
-        Tag.AZUREFUNCTIONS,
+        Tag.PYTHON,
+        Tag.SCIKITLEARN,
+        Tag.PANDAS,
+        Tag.NUMPY,
+        Tag.MACHINELEARNING,
         Tag.AZURE,
-        Tag.AZUREDEVOPS
+        Tag.JUPYTER,
+        Tag.MATPLOTLIB
       ]
     },
     {
       id: 3,
-      name: 'PGS & QMS Portal – MVC Version',
-      summary: 'Legacy ASP.NET MVC application for project and quality governance.',
-      description: 'Built the original version of the PGS & QMS portal using ASP.NET MVC and SQL Server. Delivered core governance features including project tracking, quality audits, issue management, and document control. Implemented audit logging, custom reporting, and secure authentication workflows. Deployed and maintained through Azure DevOps pipelines.',
-      projectLink: 'https://github.com/SurajK221b/pgs-qms-mvc',
+      name: 'Computer Vision for Retail',
+      summary: 'Real-time object detection and inventory management using deep learning.',
+      description: 'Developed an end-to-end computer vision solution for retail inventory management using YOLO v5 and OpenCV. Implemented real-time product detection, shelf monitoring, and automated stock counting. Built custom datasets with 50,000+ annotated images and achieved 96% mAP. Deployed using Azure Container Instances with REST APIs for integration with existing POS systems. Included customer behavior analysis and heat mapping.',
+      projectLink: 'https://github.com/SurajK221b/retail-cv',
       tags: [
-        Tag.ASPNETMVC,
-        Tag.SQLSERVER,
+        Tag.PYTHON,
+        Tag.PYTORCH,
+        Tag.OPENCV,
+        Tag.DEEPLEARNING,
+        Tag.AZURE,
+        Tag.DOCKER,
         Tag.RESTAPI,
-        Tag.AZURESERVICE,
-        Tag.AZUREDEVOPS
+        Tag.TENSORFLOW
       ]
     },
     {
       id: 4,
-      name: 'PGS & QMS Portal – Angular Upgrade',
-      summary: 'Modernized governance portal using Angular and .NET Core microservices.',
-      description: 'Migrated the legacy MVC system to a modern Angular and .NET Core microservices-based architecture. Enhanced UX with responsive layouts, dynamic dashboards, and token-based authentication. Backend microservices used EF Core and SQL Server with API-first development. CI/CD pipelines automated using Azure DevOps for seamless delivery and rollback.',
-      projectLink: 'https://github.com/SurajK221b/pgs-qms-angular',
+      name: 'NLP Sentiment Analysis Engine',
+      summary: 'Multi-language sentiment analysis with transformer models.',
+      description: 'Created a sophisticated NLP engine using BERT, RoBERTa, and custom transformer architectures for real-time sentiment analysis across multiple languages. Processed social media data, customer reviews, and feedback forms. Implemented attention visualization, emotion detection, and topic modeling. Achieved 94% accuracy on multilingual datasets with support for English, Spanish, French, and German. Deployed using FastAPI and Azure Functions.',
+      projectLink: 'https://github.com/SurajK221b/nlp-sentiment',
       tags: [
-        Tag.DOTNETCORE,
-        Tag.EFCORE,
-        Tag.MICROSERVICES,
-        Tag.ANGULAR,
-        Tag.SQLSERVER,
-        Tag.AZUREDEVOPS
+        Tag.PYTHON,
+        Tag.TENSORFLOW,
+        Tag.PYTORCH,
+        Tag.NLTK,
+        Tag.SPACY,
+        Tag.FASTAPI,
+        Tag.AZURE,
+        Tag.DEEPLEARNING
       ]
     },
     {
       id: 5,
-      name: 'RMS ETL Integration',
-      summary: 'ETL pipeline for MyNextHire recruitment platform.',
-      description: 'Developed an end-to-end ETL pipeline for recruitment data migration between MyNextHire and internal HR systems. Performed data cleansing, transformation, validation, and loading into SQL Server. Automated historical sync jobs and improved data reliability through logging, error tracking, and retry workflows. Delivered with CI/CD and version control on Azure DevOps.',
-      projectLink: 'https://github.com/SurajK221b/rms-integration',
+      name: 'AI-Powered Drug Discovery',
+      summary: 'Machine learning platform for molecular property prediction and drug design.',
+      description: 'Developed a comprehensive drug discovery platform using graph neural networks and molecular descriptors. Implemented ADMET property prediction, drug-target interaction modeling, and molecular generation using GANs. Built custom datasets from ChEMBL and PubChem with 2M+ compounds. Achieved significant improvement in lead compound identification and reduced screening time by 60%. Integrated with pharmaceutical research workflows.',
+      projectLink: 'https://github.com/SurajK221b/ai-drug-discovery',
       tags: [
-        Tag.ASPNETMVC,
-        Tag.SQLSERVER,
-        Tag.ETL,
-        Tag.AZUREDEVOPS
+        Tag.PYTHON,
+        Tag.TENSORFLOW,
+        Tag.PYTORCH,
+        Tag.MACHINELEARNING,
+        Tag.DEEPLEARNING,
+        Tag.PANDAS,
+        Tag.NUMPY,
+        Tag.JUPYTER
       ]
     },
     {
       id: 6,
-      name: 'Ventaforce MLM System',
-      summary: 'Modular ASP.NET MVC platform for multi-level marketing.',
-      description: 'Developed financial and compensation modules in the MLM system Ventaforce using ASP.NET MVC and SQL Server. Implemented e-wallets, business analytics, and customizable commission plans. Integrated REST APIs for external services like SMS and payment gateways. Ensured modularity and scalability for global client use.',
-      projectLink: 'https://github.com/SurajK221b/ventaforce',
+      name: 'Smart Healthcare Chatbot',
+      summary: 'Conversational AI for medical consultation and symptom analysis.',
+      description: 'Built an intelligent healthcare chatbot using natural language processing and medical knowledge graphs. Implemented symptom checker, medication reminders, appointment scheduling, and emergency detection. Used BERT for intent recognition and trained on medical literature and diagnostic guidelines. Integrated with telemedicine platforms and achieved 88% accuracy in symptom-to-condition mapping. HIPAA-compliant with end-to-end encryption.',
+      projectLink: 'https://github.com/SurajK221b/medical-chatbot',
       tags: [
-        Tag.ASPNETMVC,
-        Tag.SQLSERVER,
-        Tag.RESTAPI,
-        Tag.HTML5,
-        Tag.CSS3,
-        Tag.JAVASCRIPT
+        Tag.PYTHON,
+        Tag.TENSORFLOW,
+        Tag.NLTK,
+        Tag.SPACY,
+        Tag.FASTAPI,
+        Tag.AZURE,
+        Tag.DEEPLEARNING,
+        Tag.RESTAPI
       ]
     },
     {
       id: 7,
-      name: 'C# Web Scraper',
-      summary: 'Browser automation and data extraction using Selenium.',
-      description: 'Built a custom C# application using Selenium WebDriver to automate interactions with dynamic websites. Extracted structured data from JavaScript-heavy pages and saved outputs in consumable formats for reporting. Used in internal tooling for client dashboards and recurring reports.',
-      projectLink: 'https://github.com/SurajK221b/csharp-scraper',
+      name: 'Time Series Forecasting Platform',
+      summary: 'Advanced forecasting models for business and healthcare metrics.',
+      description: 'Developed a comprehensive time series forecasting platform using LSTM, GRU, and Transformer models. Implemented forecasting for patient census, equipment utilization, and resource demand in healthcare settings. Built automated feature engineering, model selection, and hyperparameter optimization. Achieved 15% improvement in forecast accuracy over traditional methods. Deployed with real-time monitoring and automated retraining pipelines.',
+      projectLink: 'https://github.com/SurajK221b/timeseries-forecast',
       tags: [
-        Tag.CSHARP,
-        Tag.RESTAPI,
-        Tag.SELENIUM
+        Tag.PYTHON,
+        Tag.TENSORFLOW,
+        Tag.PYTORCH,
+        Tag.PANDAS,
+        Tag.MACHINELEARNING,
+        Tag.DEEPLEARNING,
+        Tag.AZURE,
+        Tag.JUPYTER
       ]
     },
     {
       id: 8,
-      name: 'CrewzIT – Transport Locator',
-      summary: 'Location-based crew and transport coordination system.',
-      description: 'Implemented backend APIs and service logic for CrewzIT, a real-time coordination system for tour crews. Features included crew check-in tracking, ETA calculation using GPS data, and alerts. Built with ASP.NET MVC and Azure-hosted services using SQL Server for storage and Azure DevOps for CI/CD.',
-      projectLink: 'https://github.com/SurajK221b/crewzit',
+      name: 'MLOps Pipeline Framework',
+      summary: 'End-to-end machine learning operations and model deployment platform.',
+      description: 'Built a comprehensive MLOps framework for automated model training, validation, and deployment. Implemented CI/CD pipelines for ML models using Azure DevOps, model versioning with MLflow, and automated testing with great expectations. Created monitoring dashboards for model drift detection and performance tracking. Supported multiple deployment targets including Azure ML, Azure Functions, and container instances.',
+      projectLink: 'https://github.com/SurajK221b/mlops-framework',
       tags: [
-        Tag.ASPNETMVC,
-        Tag.SQLSERVER,
-        Tag.RESTAPI,
+        Tag.PYTHON,
         Tag.AZURE,
-        Tag.AZUREDEVOPS
+        Tag.DOCKER,
+        Tag.AZUREDEVOPS,
+        Tag.MACHINELEARNING,
+        Tag.CI_CD,
+        Tag.GIT,
+        Tag.RESTAPI
       ]
     },
     {
       id: 9,
-      name: 'HRMS Platform',
-      summary: 'Human resource management system with full employee lifecycle.',
-      description: 'Developed modules for employee onboarding, attendance, payroll, leave, and access control. Implemented role-based UI in Angular with secured API endpoints in ASP.NET Core. Used EF Core with SQL Server and followed layered architecture for maintainability. Delivered using Git and Azure DevOps pipelines.',
-      projectLink: 'https://github.com/SurajK221b/hrms-system',
+      name: 'Medical Image Segmentation',
+      summary: 'Deep learning for precise organ and tumor segmentation in medical images.',
+      description: 'Developed advanced image segmentation models using U-Net, SegNet, and custom architectures for medical imaging. Specialized in brain tumor segmentation, lung nodule detection, and cardiac structure analysis. Implemented data augmentation techniques and transfer learning achieving 95% Dice coefficient. Used DICOM processing and integrated with PACS systems. Validated on multiple medical imaging datasets including BraTS and LUNA16.',
+      projectLink: 'https://github.com/SurajK221b/medical-segmentation',
       tags: [
-        Tag.DOTNETCORE,
-        Tag.EFCORE,
-        Tag.ANGULAR,
-        Tag.SQLSERVER
+        Tag.PYTHON,
+        Tag.TENSORFLOW,
+        Tag.PYTORCH,
+        Tag.OPENCV,
+        Tag.DEEPLEARNING,
+        Tag.NUMPY,
+        Tag.MATPLOTLIB,
+        Tag.JUPYTER
       ]
     },
     {
-  id: 10,
-  name: 'Developer Portfolio Website',
-  summary: 'Personal portfolio built with Angular, .NET API, and Visual Studio Dark theme.',
-  description: 'Ongoing project showcasing personal projects, technical skills, and experience. Developed with Angular standalone components and integrated with a backend API using .NET Core. The design is aligned with Visual Studio Code Dark Theme for consistent developer branding. Implements modular SCSS styling, custom tag filtering, and route-based navigation. Optimized for responsiveness, accessibility, and code readability.',
-  projectLink: 'https://github.com/SurajK221b/portfolio',
-  tags: [
-    Tag.DOTNETCORE,
-    Tag.ANGULAR,
-    Tag.TYPESCRIPT,
-    Tag.HTML5,
-    Tag.CSS3,
-    Tag.RESTAPI,
-    Tag.VSCODE,
-    Tag.VISUALSTUDIO,
-    Tag.GIT,
-    Tag.GITHUB
-  ]
-}
+      id: 10,
+      name: 'AI Portfolio Website',
+      summary: 'Personal portfolio showcasing AI/ML expertise with modern Angular architecture.',
+      description: 'Modern portfolio website built with Angular standalone components and .NET Core API backend. Features responsive design with glass-morphism effects, dynamic project filtering, and interactive technology showcases. Implements custom animations, mobile-optimized navigation, and accessibility features. Showcases AI/ML projects with detailed case studies and technical implementations. Deployed with CI/CD pipelines and optimized for performance.',
+      projectLink: 'https://github.com/SurajK221b/ai-portfolio',
+      tags: [
+        Tag.ANGULAR,
+        Tag.TYPESCRIPT,
+        Tag.DOTNETCORE,
+        Tag.HTML5,
+        Tag.CSS3,
+        Tag.RESTAPI,
+        Tag.AZURE,
+        Tag.GIT,
+        Tag.GITHUB
+      ]
+    }
 
   ];
 }
