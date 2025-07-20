@@ -1,8 +1,10 @@
 @import '../../styles.css';
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
+/* Standardized Default Container */
 .default-container {
-  min-height: 100vh;
+  min-height: calc(100vh - 72px);
+  /* Account for header height */
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
     url('../../assets/ai-banner.jpg');
   background-size: cover;
@@ -30,13 +32,14 @@
   pointer-events: none;
 }
 
+/* Standardized Contact Card */
 .contact-card {
-  max-width: 800px;
+  max-width: 1400px;
   width: 100%;
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(20px);
   border: 2px solid rgba(0, 212, 255, 0.3);
-  padding: 60px 40px;
+  padding: 60px 50px;
   border-radius: 20px;
   text-align: center;
   color: #F5F5F5;
@@ -83,8 +86,9 @@
   box-shadow: 0 0 40px rgba(0, 212, 255, 0.5);
 }
 
+/* Standardized Contact Title */
 .contact-title {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 800;
   background: linear-gradient(135deg, #00D4FF 0%, #00FF88 100%);
   background-clip: text;
@@ -283,13 +287,19 @@
   color: #00FF88;
 }
 
-/* ============================
-   Responsive Fixes for Mobile
-   ============================ */
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .contact-card {
+    max-width: 1200px;
+    padding: 50px 40px;
+  }
+}
+
 @media (max-width: 768px) {
   .default-container {
     padding: 40px 15px;
     background-attachment: scroll;
+    min-height: calc(100vh - 60px);
   }
 
   .contact-card {

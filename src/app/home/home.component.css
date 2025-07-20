@@ -1,63 +1,81 @@
+/* Standardized Main Container */
 .home-container {
-  padding: 20px 20px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #1e1e1e;
-  background-image:
-    linear-gradient(145deg, rgba(0, 0, 0, 0.7) 0%, rgba(89, 89, 97, 0.7) 100%),
-    repeating-linear-gradient(0deg,
-      rgba(255, 255, 255, 0.03),
-      rgba(255, 255, 255, 0.03) 1px,
-      transparent 1px,
-      transparent 2px),
+  min-height: calc(100vh - 72px);
+  /* Account for header height */
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
     url('../../assets/ai-banner.jpg');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  min-height: calc(100vh - 12%);
-  box-sizing: border-box;
+  background-attachment: fixed;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  position: relative;
 }
 
+.home-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg,
+      rgba(0, 212, 255, 0.1) 0%,
+      rgba(0, 255, 136, 0.05) 50%,
+      rgba(0, 212, 255, 0.1) 100%);
+  pointer-events: none;
+}
+
+/* Standardized Content Container */
 .home-content {
-  max-width: 2000px;
-  text-align: start;
-  padding: 40px 100px;
-  box-sizing: border-box;
-  backdrop-filter: blur(10px);
-  background: rgba(0, 0, 0, 0.6);
+  max-width: 1400px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(20px);
   border-radius: 20px;
+  padding: 60px 50px;
   border: 1px solid rgba(0, 212, 255, 0.3);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 1;
+  text-align: left;
 }
 
-@media (max-width: 1024px) {
+/* Responsive Design */
+@media (max-width: 1200px) {
   .home-content {
-    padding: 30px 40px;
+    padding: 50px 40px;
+    max-width: 1200px;
   }
 }
 
 @media (max-width: 768px) {
   .home-container {
-    padding: 16px 8px 100px;
+    padding: 40px 15px;
+    background-attachment: scroll;
+    min-height: calc(100vh - 60px);
   }
 
   .home-content {
-    padding: 25px 20px;
+    padding: 40px 25px;
+    border-radius: 15px;
   }
 }
 
 @media (max-width: 480px) {
   .home-container {
-    padding: 8px 15px 60px;
-    min-height: calc(100vh - 8%);
+    padding: 30px 10px;
   }
 
   .home-content {
-    padding: 20px 15px;
+    padding: 30px 20px;
   }
 }
 
+/* Typography */
 .home-title {
   font-size: 2.5rem;
   line-height: 3rem;

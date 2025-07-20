@@ -1,12 +1,13 @@
-/* Portfolio Wrapper */
+/* Standardized Portfolio Wrapper */
 .portfolio-wrapper {
-  min-height: 100vh;
+  min-height: calc(100vh - 72px);
+  /* Account for header height */
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
     url('../../assets/ai-banner.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  padding: 80px 0;
+  padding: 80px 20px;
   position: relative;
   font-family: 'Inter', 'Segoe UI', sans-serif;
 }
@@ -25,29 +26,29 @@
   pointer-events: none;
 }
 
-/* Portfolio Container */
+/* Standardized Portfolio Container */
 .portfolio-container {
-  max-width: 2000px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
   position: relative;
   z-index: 1;
 }
 
-/* Content */
+/* Standardized Content */
 .content {
   width: 100%;
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(20px);
   border-radius: 20px;
-  padding: 50px 40px;
+  padding: 60px 50px;
   border: 1px solid rgba(0, 212, 255, 0.3);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
-/* AI Portfolio Title */
+/* Standardized AI Portfolio Title */
 .ai-portfolio-title {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 800;
   background: linear-gradient(135deg, #00D4FF 0%, #00FF88 50%, #00D4FF 100%);
   background-clip: text;
@@ -153,20 +154,25 @@
 
 /* Responsive Design */
 @media (max-width: 1200px) {
-  .projects-grid {
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 25px;
+  .portfolio-container {
+    max-width: 1200px;
   }
 
   .content {
-    padding: 40px 30px;
+    padding: 50px 40px;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
   }
 }
 
 @media (max-width: 768px) {
   .portfolio-wrapper {
-    padding: 40px 0;
+    padding: 40px 15px;
     background-attachment: scroll;
+    min-height: calc(100vh - 60px);
   }
 
   .portfolio-container {
@@ -174,7 +180,7 @@
   }
 
   .content {
-    padding: 30px 20px;
+    padding: 40px 25px;
     border-radius: 15px;
   }
 
@@ -213,6 +219,14 @@
 }
 
 @media (max-width: 480px) {
+  .portfolio-wrapper {
+    padding: 30px 10px;
+  }
+
+  .content {
+    padding: 30px 20px;
+  }
+
   .ai-portfolio-title {
     font-size: 2rem;
     margin-bottom: 25px;
@@ -238,10 +252,6 @@
 
   .focus-text {
     font-size: 0.8rem;
-  }
-
-  .content {
-    padding: 25px 15px;
   }
 }
 
