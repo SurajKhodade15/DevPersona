@@ -1,39 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-/* Main Container */
+/* Standardized Main Container */
 .about-container {
-  min-height: calc(100vh - 12%);
-  background-color: #1e1e1e;
-  background-image:
-    linear-gradient(145deg, rgba(0, 0, 0, 0.8) 0%, rgba(89, 89, 97, 0.8) 100%),
-    repeating-linear-gradient(0deg,
-      rgba(255, 255, 255, 0.02),
-      rgba(255, 255, 255, 0.02) 1px,
-      transparent 1px,
-      transparent 2px),
+  min-height: calc(100vh - 72px);
+  /* Account for header height */
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
     url('../../assets/ai-banner.jpg');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   background-attachment: fixed;
-  padding: 60px 20px;
+  padding: 80px 20px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  position: relative;
 }
 
-/* Content Container */
+.about-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg,
+      rgba(0, 212, 255, 0.1) 0%,
+      rgba(0, 255, 136, 0.05) 50%,
+      rgba(0, 212, 255, 0.1) 100%);
+  pointer-events: none;
+}
+
+/* Standardized Content Container */
 .about-content {
-  max-width: 2000px;
+  max-width: 1400px;
   width: 100%;
-  backdrop-filter: blur(15px);
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(20px);
   border-radius: 20px;
+  padding: 60px 50px;
   border: 1px solid rgba(0, 212, 255, 0.3);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-  padding: 50px 60px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
   position: relative;
+  z-index: 1;
 }
 
 .about-content::before {
@@ -66,14 +75,18 @@
   border-top: 2px solid rgba(0, 212, 255, 0.3);
 }
 
-/* Typography */
+/* Standardized Typography */
 .about-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #00D4FF;
-  margin-bottom: 2rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #00D4FF 0%, #00FF88 50%, #00D4FF 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-align: center;
+  margin-bottom: 40px;
+  text-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+  letter-spacing: -1px;
 }
 
 .about-paragraph {
@@ -305,58 +318,123 @@
 
   .cta-button {
     padding: 0.8rem 1.5rem;
-  }
 
-  .cta-button a {
-    font-size: 0.9rem;
-  }
-}
+    /* Responsive Design */
+    @media (max-width: 1200px) {
+      .about-content {
+        padding: 50px 40px;
+        max-width: 1200px;
+      }
+    }
 
-/* Animation for content loading */
-.content-section {
-  animation: fadeInUp 0.8s ease-out;
-}
+    @media (max-width: 768px) {
+      .about-container {
+        padding: 40px 15px;
+        background-attachment: scroll;
+        min-height: calc(100vh - 60px);
+      }
 
-.contact-section {
-  animation: fadeInUp 1s ease-out;
-}
+      .about-content {
+        padding: 40px 25px;
+        border-radius: 15px;
+      }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
+      .about-title {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+      }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+      .about-paragraph {
+        font-size: 1rem;
+        padding: 1rem 1.5rem;
+      }
 
-/* Smooth scrolling behavior */
-html {
-  scroll-behavior: smooth;
-}
+      .about-picture {
+        width: 200px;
+        height: 200px;
+      }
 
-/* Enhanced focus states for accessibility */
-.cta-button:focus {
-  outline: 3px solid rgba(0, 212, 255, 0.5);
-  outline-offset: 2px;
-}
+      .cta-button {
+        padding: 12px 25px;
+        font-size: 1rem;
+      }
+    }
 
-/* Loading animation for images */
-.about-picture {
-  animation: imageLoad 1s ease-out;
-}
+    @media (max-width: 480px) {
+      .about-container {
+        padding: 30px 10px;
+      }
 
-@keyframes imageLoad {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
+      .about-content {
+        padding: 30px 20px;
+      }
 
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
+      .about-title {
+        font-size: 2rem;
+        letter-spacing: -0.5px;
+      }
+
+      .about-paragraph {
+        font-size: 0.95rem;
+        padding: 0.8rem 1.2rem;
+      }
+
+      .about-picture {
+        width: 160px;
+        height: 160px;
+      }
+
+      .cta-button {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+      }
+    }
+
+    /* Animation for content loading */
+    .content-section {
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .contact-section {
+      animation: fadeInUp 1s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Smooth scrolling behavior */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Enhanced focus states for accessibility */
+    .cta-button:focus {
+      outline: 3px solid rgba(0, 212, 255, 0.5);
+      outline-offset: 2px;
+    }
+
+    /* Loading animation for images */
+    .about-picture {
+      animation: imageLoad 1s ease-out;
+    }
+
+    @keyframes imageLoad {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }

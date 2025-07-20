@@ -1,36 +1,46 @@
-/* Main Container */
+/* Standardized Main Container */
 .accordion-container {
-  min-height: 100vh;
-  background-color: #1e1e1e;
-  background-image:
-    linear-gradient(145deg, rgba(0, 0, 0, 0.9) 0%, rgba(89, 89, 97, 0.9) 100%),
-    repeating-linear-gradient(0deg,
-      rgba(255, 255, 255, 0.02),
-      rgba(255, 255, 255, 0.02) 1px,
-      transparent 1px,
-      transparent 2px),
+  min-height: calc(100vh - 72px);
+  /* Account for header height */
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
     url('../../assets/ai-banner.jpg');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   background-attachment: fixed;
-  padding: 20px;
+  padding: 80px 20px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  position: relative;
 }
 
-/* Content Container */
+.accordion-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg,
+      rgba(0, 212, 255, 0.1) 0%,
+      rgba(0, 255, 136, 0.05) 50%,
+      rgba(0, 212, 255, 0.1) 100%);
+  pointer-events: none;
+}
+
+/* Standardized Content Container */
 .accordion-content {
-  /* max-width: 1000px; */
+  max-width: 1400px;
   width: 100%;
-  backdrop-filter: blur(15px);
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(20px);
   border-radius: 20px;
+  padding: 60px 50px;
   border: 1px solid rgba(0, 212, 255, 0.3);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
-  padding: 30px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
   position: relative;
+  z-index: 1;
 }
 
 .accordion-content::before {
@@ -326,24 +336,104 @@ mat-expansion-panel.mat-expanded mat-expansion-panel-header::after {
 
 ::ng-deep mat-expansion-indicator {
   align-self: center;
-  /* Keep arrow vertically aligned */
   margin-left: auto;
-  /* Push it to the right */
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .accordion-content {
+    padding: 50px 40px;
+    max-width: 1200px;
+  }
 }
 
 @media (max-width: 768px) {
+  .accordion-container {
+    padding: 40px 15px;
+    background-attachment: scroll;
+    min-height: calc(100vh - 60px);
+  }
+
+  .accordion-content {
+    padding: 40px 25px;
+    border-radius: 15px;
+  }
+
   mat-expansion-panel-header {
     min-height: 64px !important;
-    padding-top: 14px !important;
-    padding-bottom: 14px !important;
+    padding: 16px 20px !important;
   }
 
   mat-panel-title {
-    font-size: 0.95rem;
-    line-height: 1.5;
+    font-size: 1rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .tech-board {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    padding: 20px;
+  }
+
+  .tech-cell {
+    padding: 12px;
+  }
+
+  .tech-cell i {
+    font-size: 2rem !important;
+  }
+
+  .accordion-text {
+    padding: 20px 25px !important;
+    font-size: 0.95rem !important;
   }
 }
 
+@media (max-width: 480px) {
+  .accordion-container {
+    padding: 30px 10px;
+  }
+
+  .accordion-content {
+    padding: 30px 20px;
+  }
+
+  mat-expansion-panel-header {
+    min-height: 56px !important;
+    padding: 12px 16px !important;
+  }
+
+  mat-panel-title {
+    font-size: 0.95rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .tech-board {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .tech-cell {
+    padding: 10px;
+  }
+
+  .tech-cell i {
+    font-size: 1.8rem !important;
+  }
+
+  .accordion-text {
+    padding: 15px 20px !important;
+    font-size: 0.9rem !important;
+  }
+
+  .ai-exp-text {
+    font-size: 0.95rem !important;
+    padding: 6px 12px !important;
+  }
+}
+
+/* Panel Header Override Styles */
 mat-expansion-panel-header {
   padding-top: 12px !important;
   padding-bottom: 12px !important;
@@ -356,7 +446,6 @@ mat-panel-title {
   line-height: 1.4;
   word-break: break-word;
 }
-
 
 .default-exp-text {
   color: #FFD700;
