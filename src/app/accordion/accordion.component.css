@@ -1,104 +1,231 @@
-.accordion-left {
-  max-width: 820px;
-  margin: 0;
-  width: 100%;
-}
-
-mat-expansion-panel {
-  margin-bottom: 15px;
-  background-color: #1e1e1e; /* VSCode editor bg */
-  color: #d4d4d4; /* Foreground */
-  border-radius: 8px !important;
-  border-left: 4px solid #007ACC; /* Accent blue */
-  transition: all 0.3s ease;
-}
-
-mat-expansion-panel-header {
-  padding: 15px 20px;
-  font-weight: 500;
-  font-size: 1.1rem;
-  background-color: #252526 !important; /* Panel header */
-  color: #d4d4d4 !important;
-  border-radius: 8px 8px 0 0 !important;
-}
-
-mat-expansion-panel-header:hover {
-  background-color: #333333 !important; /* Slight hover effect */
-}
-
-.accordion-text {
-  padding: 15px 20px;
-  line-height: 1.6;
-  font-size: 1rem;
-  color: #d4d4d4;
-}
-
-mat-panel-title {
-  color: #d4d4d4 !important;
-  font-weight: 600;
-}
-
-.exp {
-  color: #d4d4d4 !important;
-  font-weight: 400;
-}
-.default-container {
-  padding: 2rem 1rem;
+/* Main Container */
+.accordion-container {
+  min-height: 100vh;
+  background-color: #1e1e1e;
+  background-image:
+    linear-gradient(145deg, rgba(0, 0, 0, 0.9) 0%, rgba(89, 89, 97, 0.9) 100%),
+    repeating-linear-gradient(0deg,
+      rgba(255, 255, 255, 0.02),
+      rgba(255, 255, 255, 0.02) 1px,
+      transparent 1px,
+      transparent 2px),
+    url('../../assets/ai-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 20px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 2rem;
-  font-family: 'Inter', sans-serif;
 }
 
-/* Content layout */
-.content {
+/* Content Container */
+.accordion-content {
+  max-width: 1000px;
   width: 100%;
-  max-width: 1100px;
+  backdrop-filter: blur(15px);
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  position: relative;
 }
 
-
-.default-highlight {
-  color: #FFD700; /* VSCode function name yellow */
-  font-weight: 400;
+.accordion-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg,
+      rgba(0, 212, 255, 0.05) 0%,
+      rgba(0, 255, 136, 0.05) 50%,
+      rgba(0, 212, 255, 0.05) 100%);
+  border-radius: 20px;
+  pointer-events: none;
 }
 
+/* Accordion Wrapper */
+.accordion-wrapper {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+/* AI Panel Styling */
+.ai-panel {
+  margin-bottom: 20px !important;
+  background: rgba(0, 0, 0, 0.6) !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(0, 212, 255, 0.3) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+  transition: all 0.4s ease !important;
+  backdrop-filter: blur(10px);
+}
+
+.ai-panel:hover {
+  border-color: rgba(0, 212, 255, 0.5) !important;
+  box-shadow: 0 6px 25px rgba(0, 212, 255, 0.2) !important;
+  transform: translateY(-2px);
+}
+
+/* Panel Headers */
+.ai-panel mat-expansion-panel-header {
+  padding: 20px 25px !important;
+  font-weight: 600 !important;
+  font-size: 1.1rem !important;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(0, 255, 136, 0.05)) !important;
+  color: #00D4FF !important;
+  border-radius: 12px 12px 0 0 !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease !important;
+}
+
+.ai-panel mat-expansion-panel-header:hover {
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(0, 255, 136, 0.08)) !important;
+}
+
+.ai-panel.mat-expanded mat-expansion-panel-header {
+  background: linear-gradient(135deg, rgba(0, 255, 136, 0.15), rgba(0, 212, 255, 0.1)) !important;
+  color: #00FF88 !important;
+}
+
+/* Nested Panels */
+.nested-panel {
+  margin: 10px 0 !important;
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 8px !important;
+}
+
+.nested-panel mat-expansion-panel-header {
+  padding: 15px 20px !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: #F5F5F5 !important;
+  font-size: 1rem !important;
+}
+
+/* Panel Titles */
+mat-panel-title {
+  color: inherit !important;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+  word-break: break-word !important;
+}
+
+/* Accordion Text Content */
+.accordion-text {
+  padding: 25px 30px !important;
+  line-height: 1.7 !important;
+  font-size: 1rem !important;
+  color: #F5F5F5 !important;
+  background: rgba(255, 255, 255, 0.02);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+/* AI Highlights */
+.ai-highlight {
+  color: #00FF88 !important;
+  font-weight: 600 !important;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Experience Text */
+.ai-exp-text {
+  color: #00D4FF !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  margin-bottom: 15px !important;
+  padding: 8px 15px !important;
+  background: rgba(0, 212, 255, 0.1) !important;
+  border-radius: 6px !important;
+  border-left: 3px solid #00D4FF !important;
+}
+
+/* Enhanced Tech Board */
 .tech-board {
   display: grid;
-  max-width: 820px;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
-  background-color: #1e1e1e;
-  padding: 20px;
-  border-radius: 8px;
+  gap: 15px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  margin: 15px 0;
 }
 
 .tech-cell {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: #252526; */
-  border: 2px solid #5e748a;
-  padding: 10px;
-  margin: 20px 30px;
-  border-radius: 8px; 
-  /* color: #d4d4d4; */
-  font-size: 6rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(0, 212, 255, 0.3);
+  padding: 15px;
+  border-radius: 10px;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(5px);
+}
+
+.tech-cell:hover {
+  transform: translateY(-5px) scale(1.05);
+  border-color: #00D4FF;
+  box-shadow: 0 8px 25px rgba(0, 212, 255, 0.3);
+  background: rgba(0, 212, 255, 0.1);
 }
 
 .tech-cell i {
-  /* color: #d4d4d4; */
-  font-size: 3rem;
+  font-size: 2.5rem !important;
+  transition: all 0.3s ease;
 }
 
+.tech-cell:hover i {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.5));
+}
+
+/* Tech Category Colors */
+.ai-tech:hover {
+  border-color: #00FF88;
+  box-shadow: 0 8px 25px rgba(0, 255, 136, 0.3);
+}
+
+.data-tech:hover {
+  border-color: #FFD700;
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3);
+}
+
+.cloud-tech:hover {
+  border-color: #00D4FF;
+  box-shadow: 0 8px 25px rgba(0, 212, 255, 0.3);
+}
+
+.dev-tech:hover {
+  border-color: #FF6B6B;
+  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+}
+
+.traditional-tech:hover {
+  border-color: #9C88FF;
+  box-shadow: 0 8px 25px rgba(156, 136, 255, 0.3);
+}
+
+/* Lists */
 ul {
-  padding-left: 20px;
+  padding-left: 25px !important;
+  margin: 15px 0 !important;
 }
 
 li {
-  margin-bottom: 8px;
-  color: #d4d4d4;
+  margin-bottom: 12px !important;
+  color: #F5F5F5 !important;
+  line-height: 1.6 !important;
+}
+
+li::marker {
+  color: #00D4FF;
 }
 
 @media (max-width: 768px) {
@@ -124,6 +251,7 @@ mat-panel-title.exp {
   word-wrap: break-word;
   overflow-wrap: break-word
 }
+
 @media (max-width: 768px) {
   mat-panel-title.exp {
     font-size: 0.9rem !important;
@@ -133,6 +261,7 @@ mat-panel-title.exp {
     padding: 12px 15px;
   }
 }
+
 @media (max-width: 768px) {
   .tech-board {
     grid-template-columns: repeat(2, 1fr);
@@ -148,14 +277,17 @@ mat-panel-title.exp {
     font-size: 2.5rem;
   }
 }
+
 ::ng-deep .mat-expansion-indicator {
   display: none;
 }
 
 /* VS Code Dark theme-compatible arrow icon */
 mat-expansion-panel-header::after {
-  content: '⌄'; /* Downward arrow */
-  color: #9CDCFE; /* VS Code light blue for icons/text */
+  content: '⌄';
+  /* Downward arrow */
+  color: #9CDCFE;
+  /* VS Code light blue for icons/text */
   font-size: 16px;
   margin-left: auto;
   transition: transform 0.3s ease, color 0.3s ease;
@@ -166,7 +298,8 @@ mat-expansion-panel-header::after {
 /* Rotate arrow when panel is expanded */
 mat-expansion-panel.mat-expanded mat-expansion-panel-header::after {
   transform: rotate(180deg);
-  color: #4FC1FF; /* Slightly brighter blue when active */
+  color: #4FC1FF;
+  /* Slightly brighter blue when active */
 }
 
 ::ng-deep mat-expansion-panel-header {
@@ -175,8 +308,10 @@ mat-expansion-panel.mat-expanded mat-expansion-panel-header::after {
   min-height: unset !important;
   white-space: normal !important;
   line-height: 1.5 !important;
-  display: flex !important; /* Revert back to flex */
-  flex-wrap: wrap; /* Allow text wrapping */
+  display: flex !important;
+  /* Revert back to flex */
+  flex-wrap: wrap;
+  /* Allow text wrapping */
 }
 
 ::ng-deep mat-panel-title {
@@ -184,13 +319,16 @@ mat-expansion-panel.mat-expanded mat-expansion-panel-header::after {
   line-height: 1.5 !important;
   overflow: visible !important;
   word-break: break-word !important;
-  flex: 1 1 100%; /* Make title take full width */
+  flex: 1 1 100%;
+  /* Make title take full width */
   font-size: 0.95rem;
 }
 
 ::ng-deep mat-expansion-indicator {
-  align-self: center; /* Keep arrow vertically aligned */
-  margin-left: auto; /* Push it to the right */
+  align-self: center;
+  /* Keep arrow vertically aligned */
+  margin-left: auto;
+  /* Push it to the right */
 }
 
 @media (max-width: 768px) {
@@ -205,6 +343,7 @@ mat-expansion-panel.mat-expanded mat-expansion-panel-header::after {
     line-height: 1.5;
   }
 }
+
 mat-expansion-panel-header {
   padding-top: 12px !important;
   padding-bottom: 12px !important;
@@ -219,7 +358,7 @@ mat-panel-title {
 }
 
 
-.default-exp-text{
+.default-exp-text {
   color: #FFD700;
   font-size: 0.95rem;
   line-height: 1.6;
