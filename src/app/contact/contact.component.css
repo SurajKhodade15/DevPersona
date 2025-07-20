@@ -13,7 +13,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 80px 20px;
+  padding: 40px 20px;
   font-family: 'Inter', 'Segoe UI', sans-serif;
   position: relative;
 }
@@ -34,12 +34,12 @@
 
 /* Standardized Contact Card */
 .contact-card {
-  max-width: 1400px;
+  max-width: 1200px;
   width: 100%;
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(20px);
   border: 2px solid rgba(0, 212, 255, 0.3);
-  padding: 60px 50px;
+  padding: 40px 40px;
   border-radius: 20px;
   text-align: center;
   color: #F5F5F5;
@@ -47,7 +47,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 25px;
+  gap: 15px;
   position: relative;
   z-index: 1;
 }
@@ -69,8 +69,8 @@
 }
 
 .contact-image {
-  width: 240px;
-  height: 240px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid rgba(0, 212, 255, 0.4);
@@ -88,14 +88,14 @@
 
 /* Standardized Contact Title */
 .contact-title {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 800;
   background: linear-gradient(135deg, #00D4FF 0%, #00FF88 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin: 20px 0;
-  padding: 15px 0;
+  margin: 10px 0 5px 0;
+  padding: 8px 0;
   text-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
   letter-spacing: -1px;
   line-height: 1.2;
@@ -109,25 +109,115 @@
   text-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
 }
 
+/* Designation Container */
+.designation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin: 5px 0 15px 0;
+  position: relative;
+  z-index: 2;
+}
+
 .default-highlight {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: #00FF88;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin: 10px 0;
+  margin: 0;
   text-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
   position: relative;
   z-index: 2;
 }
 
-.contact-paragraph {
-  font-size: 1.3rem;
-  line-height: 1.8;
+/* Specialty Tags */
+.specialties {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+.specialty-tag {
+  background: rgba(0, 212, 255, 0.15);
+  border: 1px solid rgba(0, 212, 255, 0.4);
+  color: #00D4FF;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+}
+
+.specialty-tag:hover {
+  background: rgba(0, 255, 136, 0.15);
+  border-color: rgba(0, 255, 136, 0.4);
+  color: #00FF88;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
+}
+
+/* Professional Info */
+.professional-info {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 12px 0;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+}
+
+.experience-highlight,
+.education-highlight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 212, 255, 0.1);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  padding: 8px 14px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.experience-highlight i,
+.education-highlight i {
+  color: #00D4FF;
+  font-size: 1.2rem;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+.experience-highlight span,
+.education-highlight span {
   color: #F5F5F5;
-  margin: 1.5rem 0 2rem;
-  padding: 0 20px;
-  max-width: 700px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.experience-highlight:hover,
+.education-highlight:hover {
+  background: rgba(0, 255, 136, 0.1);
+  border-color: rgba(0, 255, 136, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 212, 255, 0.2);
+}
+
+.contact-paragraph {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #F5F5F5;
+  margin: 15px 0;
+  padding: 0 15px;
+  max-width: 650px;
   text-align: center;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
   position: relative;
@@ -137,12 +227,30 @@
 .contact-info {
   color: #F5F5F5;
   font-family: 'Inter', sans-serif;
-  font-size: 1.1rem;
-  line-height: 1.8;
+  font-size: 1rem;
+  line-height: 1.6;
   text-align: center;
   position: relative;
   z-index: 2;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  margin: 15px 0;
+}
+
+.contact-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 8px 0;
+  flex-wrap: wrap;
+}
+
+.contact-row p {
+  margin: 3px 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 180px;
+  justify-content: center;
 }
 
 .contact-info i {
@@ -167,9 +275,9 @@
 .media-icons {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
   flex-wrap: wrap;
-  margin: 20px 0;
+  margin: 15px 0;
   position: relative;
   z-index: 2;
 }
@@ -179,7 +287,7 @@
 }
 
 .media-icon i {
-  font-size: 2.8rem;
+  font-size: 2.4rem;
   color: #00D4FF;
   transition: all 0.4s ease;
   text-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
@@ -191,7 +299,7 @@
   position: relative;
   text-decoration: none;
   display: block;
-  padding: 15px;
+  padding: 12px;
   border-radius: 50%;
   background: rgba(0, 212, 255, 0.1);
   border: 2px solid rgba(0, 212, 255, 0.3);
@@ -235,8 +343,8 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 1.5rem;
-  margin-top: 20px;
+  gap: 1rem;
+  margin-top: 15px;
   position: relative;
   z-index: 2;
 }
@@ -313,8 +421,8 @@
 
   .contact-title {
     font-size: 2rem;
-    margin: 15px 0 20px 0;
-    padding: 10px 0;
+    margin: 15px 0 10px 0;
+    padding: 10px 0 5px 0;
     line-height: 1.1;
     letter-spacing: -0.5px;
   }
@@ -322,6 +430,39 @@
   .default-highlight {
     font-size: 1.4rem;
     letter-spacing: 1px;
+  }
+
+  .specialties {
+    gap: 8px;
+  }
+
+  .specialty-tag {
+    font-size: 0.8rem;
+    padding: 5px 12px;
+  }
+
+  .professional-info {
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .experience-highlight,
+  .education-highlight {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    max-width: 300px;
+  }
+
+  .contact-row {
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-row p {
+    min-width: auto;
+    font-size: 1rem;
   }
 
   .contact-paragraph {
@@ -375,13 +516,44 @@
 
   .contact-title {
     font-size: 1.8rem;
-    margin: 10px 0 15px 0;
-    padding: 8px 0;
+    margin: 10px 0 8px 0;
+    padding: 8px 0 3px 0;
     line-height: 1.1;
   }
 
   .default-highlight {
     font-size: 1.2rem;
+  }
+
+  .specialties {
+    gap: 6px;
+  }
+
+  .specialty-tag {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+  }
+
+  .professional-info {
+    gap: 10px;
+  }
+
+  .experience-highlight,
+  .education-highlight {
+    padding: 8px 12px;
+  }
+
+  .experience-highlight span,
+  .education-highlight span {
+    font-size: 0.85rem;
+  }
+
+  .contact-row {
+    gap: 15px;
+  }
+
+  .contact-row p {
+    font-size: 0.9rem;
   }
 
   .contact-paragraph {
@@ -453,22 +625,26 @@
   animation-delay: 0.2s;
 }
 
-.default-highlight {
+.designation-container {
   animation-delay: 0.3s;
 }
 
-.contact-info {
+.professional-info {
   animation-delay: 0.4s;
 }
 
-.media-icons {
+.contact-info {
   animation-delay: 0.5s;
 }
 
-.contact-paragraph {
+.media-icons {
   animation-delay: 0.6s;
 }
 
-.contact-actions {
+.contact-paragraph {
   animation-delay: 0.7s;
+}
+
+.contact-actions {
+  animation-delay: 0.8s;
 }
