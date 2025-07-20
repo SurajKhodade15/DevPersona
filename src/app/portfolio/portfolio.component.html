@@ -1,18 +1,43 @@
-<div class="align-items-center default-container">
-  <div class="content col-lg-8">
-    <h2 class="default-topic">Development Showcase</h2>
-    
-    <!-- New text content -->
-    <p class="project-intro">
-      Below are some of the key projects I've worked on, showcasing a range of technologies, design approaches, and problem-solving skills.
-    </p>
+<div class="portfolio-wrapper">
+  <div class="portfolio-container">
+    <div class="content">
+      <h2 class="ai-portfolio-title">AI & ML Project Showcase</h2>
 
-    <div class="row">
-      @for(project of projects; track project.id) {
-        <div class="col-lg-4 col-md-6 mb-4">
+      <div class="portfolio-intro">
+        <p class="intro-text">
+          Explore my comprehensive portfolio of <span class="ai-highlight">Artificial Intelligence</span> and
+          <span class="ml-highlight">Machine Learning</span> projects, ranging from healthcare applications
+          to advanced computer vision systems. Each project demonstrates cutting-edge technologies,
+          innovative problem-solving approaches, and real-world impact.
+        </p>
+
+        <div class="focus-areas">
+          <div class="focus-item">
+            <span class="focus-icon">🏥</span>
+            <span class="focus-text">Healthcare AI</span>
+          </div>
+          <div class="focus-item">
+            <span class="focus-icon">👁️</span>
+            <span class="focus-text">Computer Vision</span>
+          </div>
+          <div class="focus-item">
+            <span class="focus-icon">🧠</span>
+            <span class="focus-text">Deep Learning</span>
+          </div>
+          <div class="focus-item">
+            <span class="focus-icon">📊</span>
+            <span class="focus-text">Data Science</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="projects-grid">
+        @for(project of projects; track project.id) {
+        <div class="project-card-wrapper">
           <app-project-card [card]="project"></app-project-card>
         </div>
-      }
+        }
+      </div>
     </div>
   </div>
 </div>

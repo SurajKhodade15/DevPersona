@@ -53,6 +53,20 @@ export class Tag {
   static readonly FASTAPI = new Tag('FastAPI', '#4a6a77');
   static readonly SELENIUM = new Tag('Selenium', '#4a6a77');
 
+  // AI/ML & Data Science
+  static readonly TENSORFLOW = new Tag('TensorFlow', '#00D4FF');
+  static readonly PYTORCH = new Tag('PyTorch', '#00D4FF');
+  static readonly OPENCV = new Tag('OpenCV', '#00D4FF');
+  static readonly MACHINELEARNING = new Tag('Machine Learning', '#00FF88');
+  static readonly DEEPLEARNING = new Tag('Deep Learning', '#00FF88');
+  static readonly NUMPY = new Tag('NumPy', '#4a6a77');
+  static readonly MATPLOTLIB = new Tag('Matplotlib', '#4a6a77');
+  static readonly SCIKITLEARN = new Tag('Scikit-Learn', '#00D4FF');
+  static readonly KERAS = new Tag('Keras', '#00D4FF');
+  static readonly NLTK = new Tag('NLTK', '#4a6a77');
+  static readonly SPACY = new Tag('spaCy', '#4a6a77');
+  static readonly JUPYTER = new Tag('Jupyter', '#4a6a77');
+
   // Java / Spring
   static readonly JAVA = new Tag('Java', '#5a7581');
   static readonly SPRINGBOOT = new Tag('Spring Boot', '#5a7581');
@@ -73,7 +87,7 @@ export class Tag {
   // Golang
   static readonly GOLANG = new Tag('Golang', '#457189');
 
-  private constructor(private readonly key: string, public readonly color: string) {}
+  private constructor(private readonly key: string, public readonly color: string) { }
 
   toString() {
     return this.key;
