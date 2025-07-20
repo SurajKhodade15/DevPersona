@@ -1,11 +1,14 @@
 <div class="accordion-container">
   <div class="accordion-content">
     <div class="accordion-wrapper">
-      <mat-accordion>
-        <mat-expansion-panel class="ai-panel accordion-title">
-          <mat-expansion-panel-header>
-            <mat-panel-title>AI/ML Professional Highlights</mat-panel-title>
-          </mat-expansion-panel-header>
+
+      <!-- AI/ML Professional Highlights -->
+      <div class="custom-accordion-item">
+        <div class="custom-accordion-header" (click)="toggleSection('highlights')">
+          <h3 class="custom-accordion-title">AI/ML Professional Highlights</h3>
+          <span class="custom-accordion-icon" [class.expanded]="expandedSections['highlights']">▼</span>
+        </div>
+        <div class="custom-accordion-content" [class.show]="expandedSections['highlights']">
           <div class="accordion-text">
             <ul>
               <li><span class="ai-highlight">7+ years</span> of technology experience with <span class="ai-highlight">4
@@ -32,13 +35,16 @@
                   learning</span> implementation.</li>
             </ul>
           </div>
-        </mat-expansion-panel>
+        </div>
+      </div>
 
-        <mat-expansion-panel class="ai-panel accordion-title">
-          <mat-expansion-panel-header>
-            <mat-panel-title>AI/ML Technologies & Tools</mat-panel-title>
-          </mat-expansion-panel-header>
-
+      <!-- AI/ML Technologies & Tools -->
+      <div class="custom-accordion-item">
+        <div class="custom-accordion-header" (click)="toggleSection('technologies')">
+          <h3 class="custom-accordion-title">AI/ML Technologies & Tools</h3>
+          <span class="custom-accordion-icon" [class.expanded]="expandedSections['technologies']">▼</span>
+        </div>
+        <div class="custom-accordion-content" [class.show]="expandedSections['technologies']">
           <div class="tech-board">
             <!-- AI/ML Frameworks -->
             <div class="tech-cell ai-tech"><i class="devicon-python-plain colored" title="Python"></i></div>
@@ -76,157 +82,175 @@
             <div class="tech-cell traditional-tech"><i class="devicon-azuresqldatabase-plain colored"
                 title="SQL Server"></i></div>
           </div>
-        </mat-expansion-panel>
+        </div>
+      </div>
 
-        <mat-expansion-panel class="ai-panel accordion-title">
-          <mat-expansion-panel-header>
-            <mat-panel-title>AI/ML Experience</mat-panel-title>
-          </mat-expansion-panel-header>
+      <!-- AI/ML Experience -->
+      <div class="custom-accordion-item">
+        <div class="custom-accordion-header" (click)="toggleSection('experience')">
+          <h3 class="custom-accordion-title">AI/ML Experience</h3>
+          <span class="custom-accordion-icon" [class.expanded]="expandedSections['experience']">▼</span>
+        </div>
+        <div class="custom-accordion-content" [class.show]="expandedSections['experience']">
 
-          <mat-expansion-panel class="nested-panel">
-            <mat-expansion-panel-header>
-              <mat-panel-title><span class="ai-highlight">Senior AI/ML Engineer - Globant India</span></mat-panel-title>
-            </mat-expansion-panel-header>
-            <div class="accordion-text">
-              <p class="ai-exp-text">May 2022 – Present</p>
-              <ul>
-                <li>Architected and deployed <span class="ai-highlight">computer vision models</span> for medical
-                  imaging analysis achieving <span class="ai-highlight">95% accuracy</span>.</li>
-                <li>Built <span class="ai-highlight">NLP pipelines</span> for document processing and sentiment analysis
-                  using <span class="ai-highlight">BERT</span> and <span class="ai-highlight">GPT models</span>.</li>
-                <li>Implemented <span class="ai-highlight">MLOps workflows</span> using <span class="ai-highlight">Azure
-                    ML</span> and <span class="ai-highlight">MLflow</span> for automated model training and deployment.
-                </li>
-                <li>Developed <span class="ai-highlight">real-time inference systems</span> handling <span
-                    class="ai-highlight">1000+ predictions per second</span> using <span
-                    class="ai-highlight">FastAPI</span> and <span class="ai-highlight">Redis</span>.</li>
-                <li>Collaborated with EU-based data science teams on <span class="ai-highlight">federated
-                    learning</span> and <span class="ai-highlight">privacy-preserving ML</span> solutions.</li>
-              </ul>
+          <!-- Senior AI/ML Engineer - Globant India -->
+          <div class="experience-item">
+            <div class="experience-header" (click)="toggleSection('globant')">
+              <h4 class="experience-title">Senior AI/ML Engineer - Globant India</h4>
+              <span class="custom-accordion-icon small" [class.expanded]="expandedSections['globant']">▼</span>
             </div>
-          </mat-expansion-panel>
-
-          <mat-expansion-panel class="nested-panel">
-            <mat-expansion-panel-header>
-              <mat-panel-title><span class="ai-highlight">ML Engineer - CitiusTech Healthcare</span></mat-panel-title>
-            </mat-expansion-panel-header>
-            <div class="accordion-text">
-              <p class="ai-exp-text">Nov 2021 – Apr 2022</p>
-              <ul>
-                <li>Developed <span class="ai-highlight">predictive analytics models</span> for patient risk assessment
-                  using <span class="ai-highlight">ensemble methods</span>.</li>
-                <li>Built <span class="ai-highlight">data preprocessing pipelines</span> for healthcare datasets with
-                  <span class="ai-highlight">HIPAA compliance</span>.
-                </li>
-                <li>Implemented <span class="ai-highlight">anomaly detection systems</span> for medical device
-                  monitoring using <span class="ai-highlight">autoencoders</span>.</li>
-                <li>Created <span class="ai-highlight">automated reporting systems</span> using <span
-                    class="ai-highlight">Python</span> and <span class="ai-highlight">Power BI</span> integration.</li>
-              </ul>
+            <div class="experience-content" [class.show]="expandedSections['globant']">
+              <div class="accordion-text">
+                <p class="ai-exp-text">May 2022 – Present</p>
+                <ul>
+                  <li>Architected and deployed <span class="ai-highlight">computer vision models</span> for medical
+                    imaging analysis achieving <span class="ai-highlight">95% accuracy</span>.</li>
+                  <li>Built <span class="ai-highlight">NLP pipelines</span> for document processing and sentiment
+                    analysis
+                    using <span class="ai-highlight">BERT</span> and <span class="ai-highlight">GPT models</span>.</li>
+                  <li>Implemented <span class="ai-highlight">MLOps workflows</span> using <span
+                      class="ai-highlight">Azure
+                      ML</span> and <span class="ai-highlight">MLflow</span> for automated model training and
+                    deployment.
+                  </li>
+                  <li>Developed <span class="ai-highlight">real-time inference systems</span> handling <span
+                      class="ai-highlight">10,000+ requests/second</span> using <span
+                      class="ai-highlight">FastAPI</span>
+                    and <span class="ai-highlight">Redis caching</span>.</li>
+                </ul>
+              </div>
             </div>
-          </mat-expansion-panel>
-
-          <mat-expansion-panel class="nested-panel">
-            <mat-expansion-panel-header>
-              <mat-panel-title><span class="ai-highlight">Data Scientist - Independent Projects</span></mat-panel-title>
-            </mat-expansion-panel-header>
-            <div class="accordion-text">
-              <p class="ai-exp-text">Feb 2020 – Nov 2021</p>
-              <ul>
-                <li>Built <span class="ai-highlight">recommendation engines</span> for e-commerce platforms using <span
-                    class="ai-highlight">collaborative filtering</span>.</li>
-                <li>Developed <span class="ai-highlight">time series forecasting models</span> for financial data using
-                  <span class="ai-highlight">LSTM networks</span>.
-                </li>
-                <li>Created <span class="ai-highlight">chatbot solutions</span> using <span
-                    class="ai-highlight">Rasa</span> and <span class="ai-highlight">spaCy</span> for customer service
-                  automation.</li>
-                <li>Implemented <span class="ai-highlight">image classification systems</span> using <span
-                    class="ai-highlight">CNN architectures</span> and <span class="ai-highlight">transfer
-                    learning</span>.</li>
-              </ul>
-            </div>
-          </mat-expansion-panel>
-
-          <mat-expansion-panel class="nested-panel">
-            <mat-expansion-panel-header>
-              <mat-panel-title><span class="ai-highlight">Full-Stack Developer (Pre-AI
-                  Transition)</span></mat-panel-title>
-            </mat-expansion-panel-header>
-            <div class="accordion-text">
-              <p class="ai-exp-text">Feb 2017 – Feb 2020</p>
-              <ul>
-                <li>Developed enterprise applications using <span class="ai-highlight">.NET Core</span>, <span
-                    class="ai-highlight">Angular</span>, and <span class="ai-highlight">SQL Server</span>.</li>
-                <li>Built foundation in <span class="ai-highlight">software architecture</span>, <span
-                    class="ai-highlight">API design</span>, and <span class="ai-highlight">cloud deployment</span>.</li>
-                <li>Gained expertise in <span class="ai-highlight">data processing</span> and <span
-                    class="ai-highlight">system integration</span> that later supported AI/ML work.</li>
-              </ul>
-            </div>
-          </mat-expansion-panel>
-        </mat-expansion-panel>
-
-        <mat-expansion-panel class="ai-panel accordion-title">
-          <mat-expansion-panel-header>
-            <mat-panel-title>Education & AI Certifications</mat-panel-title>
-          </mat-expansion-panel-header>
-          <div class="accordion-text">
-            <p><strong><span class="ai-highlight">Bachelor of Engineering (BE)</span></strong> – Government College of
-              Engineering, Karad</p>
-
-            <p><strong><span class="ai-highlight">AI/ML Certifications</span></strong></p>
-            <ul>
-              <li>Google Cloud Professional <span class="ai-highlight">Machine Learning Engineer</span> (2024)</li>
-              <li>Microsoft Azure <span class="ai-highlight">AI Fundamentals (AI-900)</span> (2023)</li>
-              <li>AWS Certified <span class="ai-highlight">Machine Learning - Specialty</span> (2023)</li>
-              <li>TensorFlow Developer <span class="ai-highlight">Certificate</span> (2022)</li>
-              <li>Deep Learning Specialization - <span class="ai-highlight">Coursera (Andrew Ng)</span> (2022)</li>
-              <li>Microsoft Azure <span class="ai-highlight">Data Scientist Associate (DP-100)</span> (2024)</li>
-            </ul>
           </div>
-        </mat-expansion-panel>
 
-        <mat-expansion-panel class="ai-panel accordion-title">
-          <mat-expansion-panel-header>
-            <mat-panel-title>Languages & Communication</mat-panel-title>
-          </mat-expansion-panel-header>
-          <div class="accordion-text">
-            <p><strong><span class="ai-highlight">Professional Fluency:</span></strong> English</p>
-            <p><strong><span class="ai-highlight">Native Proficiency:</span></strong> Hindi, Marathi</p>
-            <p><strong><span class="ai-highlight">Learning:</span></strong> German (B1 Level)</p>
+          <!-- ML Engineer - CitiusTech Healthcare -->
+          <div class="experience-item">
+            <div class="experience-header" (click)="toggleSection('citiustech')">
+              <h4 class="experience-title">ML Engineer - CitiusTech Healthcare</h4>
+              <span class="custom-accordion-icon small" [class.expanded]="expandedSections['citiustech']">▼</span>
+            </div>
+            <div class="experience-content" [class.show]="expandedSections['citiustech']">
+              <div class="accordion-text">
+                <p class="ai-exp-text">Jun 2021 - Apr 2022</p>
+                <ul>
+                  <li>Designed <span class="ai-highlight">predictive models</span> for patient risk assessment using
+                    <span class="ai-highlight">ensemble methods</span> and <span class="ai-highlight">time-series
+                      analysis</span>.
+                  </li>
+                  <li>Optimized <span class="ai-highlight">feature engineering pipelines</span> reducing model training
+                    time by <span class="ai-highlight">60%</span> using <span class="ai-highlight">Apache Spark</span>.
+                  </li>
+                  <li>Implemented <span class="ai-highlight">HIPAA-compliant data processing</span> workflows for
+                    sensitive healthcare data.</li>
+                </ul>
+              </div>
+            </div>
           </div>
-        </mat-expansion-panel>
 
-        <mat-expansion-panel class="ai-panel accordion-title">
-          <mat-expansion-panel-header>
-            <mat-panel-title>AI Research & Interests</mat-panel-title>
-          </mat-expansion-panel-header>
+          <!-- Data Scientist - Independent Projects -->
+          <div class="experience-item">
+            <div class="experience-header" (click)="toggleSection('independent')">
+              <h4 class="experience-title">Data Scientist - Independent Projects</h4>
+              <span class="custom-accordion-icon small" [class.expanded]="expandedSections['independent']">▼</span>
+            </div>
+            <div class="experience-content" [class.show]="expandedSections['independent']">
+              <div class="accordion-text">
+                <p class="ai-exp-text">2020 - 2021</p>
+                <ul>
+                  <li>Built <span class="ai-highlight">recommendation systems</span> using <span
+                      class="ai-highlight">collaborative filtering</span> and <span class="ai-highlight">deep learning
+                      embeddings</span>.</li>
+                  <li>Developed <span class="ai-highlight">financial forecasting models</span> using <span
+                      class="ai-highlight">LSTM networks</span> and <span class="ai-highlight">technical
+                      indicators</span>.
+                  </li>
+                  <li>Created <span class="ai-highlight">automated trading algorithms</span> with <span
+                      class="ai-highlight">risk management</span> and <span class="ai-highlight">backtesting
+                      frameworks</span>.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Full-Stack Developer -->
+          <div class="experience-item">
+            <div class="experience-header" (click)="toggleSection('fullstack')">
+              <h4 class="experience-title">Full-Stack Developer (Pre-AI Career)</h4>
+              <span class="custom-accordion-icon small" [class.expanded]="expandedSections['fullstack']">▼</span>
+            </div>
+            <div class="experience-content" [class.show]="expandedSections['fullstack']">
+              <div class="accordion-text">
+                <p class="ai-exp-text">2018 - 2020</p>
+                <ul>
+                  <li>Developed <span class="ai-highlight">enterprise web applications</span> using <span
+                      class="ai-highlight">.NET Core</span>, <span class="ai-highlight">Angular</span>, and <span
+                      class="ai-highlight">SQL Server</span>.</li>
+                  <li>Built <span class="ai-highlight">RESTful APIs</span> and <span class="ai-highlight">microservices
+                      architecture</span> supporting <span class="ai-highlight">millions of transactions</span>.</li>
+                  <li>Implemented <span class="ai-highlight">CI/CD pipelines</span> using <span
+                      class="ai-highlight">Azure
+                      DevOps</span> reducing deployment time by <span class="ai-highlight">80%</span>.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education & Certifications -->
+      <div class="custom-accordion-item">
+        <div class="custom-accordion-header" (click)="toggleSection('education')">
+          <h3 class="custom-accordion-title">Education & AI Certifications</h3>
+          <span class="custom-accordion-icon" [class.expanded]="expandedSections['education']">▼</span>
+        </div>
+        <div class="custom-accordion-content" [class.show]="expandedSections['education']">
           <div class="accordion-text">
             <ul>
-              <li>Following latest research in <span class="ai-highlight">Large Language Models</span>, <span
-                  class="ai-highlight">Multimodal AI</span>, and <span class="ai-highlight">Foundation Models</span>.
-              </li>
-              <li>Contributing to <span class="ai-highlight">open-source ML projects</span> on GitHub and participating
-                in <span class="ai-highlight">AI research communities</span>.</li>
-              <li>Attending <span class="ai-highlight">AI conferences</span> like NeurIPS, ICML, and Google I/O for
-                latest AI innovations.</li>
-              <li>Experimenting with <span class="ai-highlight">Generative AI</span>, <span
-                  class="ai-highlight">Diffusion Models</span>, and <span class="ai-highlight">Neural Architecture
-                  Search</span>.</li>
-              <li>Reading research papers on <span class="ai-highlight">Responsible AI</span>, <span
-                  class="ai-highlight">AI Ethics</span>, and <span class="ai-highlight">Explainable AI</span>.</li>
-              <li>Exploring <span class="ai-highlight">AI for Social Good</span> applications in healthcare, education,
-                and environmental sustainability.</li>
-              <li>Practicing <span class="ai-highlight">competitive programming</span> and solving <span
-                  class="ai-highlight">AI challenges</span> on Kaggle and DrivenData.</li>
-              <li>Enjoying <span class="ai-highlight">nature photography</span> and <span
-                  class="ai-highlight">hiking</span> for creative inspiration and mental clarity.</li>
+              <li><span class="ai-highlight">Master of Computer Applications (MCA)</span> - Pune University (2018)</li>
+              <li><span class="ai-highlight">Azure AI Engineer Associate</span> - Microsoft Certified</li>
+              <li><span class="ai-highlight">TensorFlow Developer Certificate</span> - Google</li>
+              <li><span class="ai-highlight">Deep Learning Specialization</span> - Coursera (Andrew Ng)</li>
+              <li><span class="ai-highlight">Machine Learning Engineering for Production (MLOps)</span> - Coursera</li>
             </ul>
           </div>
-        </mat-expansion-panel>
+        </div>
+      </div>
 
-      </mat-accordion>
+      <!-- Languages & Communication -->
+      <div class="custom-accordion-item">
+        <div class="custom-accordion-header" (click)="toggleSection('languages')">
+          <h3 class="custom-accordion-title">Languages & Communication</h3>
+          <span class="custom-accordion-icon" [class.expanded]="expandedSections['languages']">▼</span>
+        </div>
+        <div class="custom-accordion-content" [class.show]="expandedSections['languages']">
+          <div class="accordion-text">
+            <ul>
+              <li><span class="ai-highlight">English</span> - Professional working proficiency</li>
+              <li><span class="ai-highlight">Hindi</span> - Native speaker</li>
+              <li><span class="ai-highlight">Marathi</span> - Native speaker</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI Research & Interests -->
+      <div class="custom-accordion-item">
+        <div class="custom-accordion-header" (click)="toggleSection('research')">
+          <h3 class="custom-accordion-title">AI Research & Interests</h3>
+          <span class="custom-accordion-icon" [class.expanded]="expandedSections['research']">▼</span>
+        </div>
+        <div class="custom-accordion-content" [class.show]="expandedSections['research']">
+          <div class="accordion-text">
+            <ul>
+              <li><span class="ai-highlight">Multimodal AI</span> - Combining vision, language, and speech models</li>
+              <li><span class="ai-highlight">Federated Learning</span> - Privacy-preserving distributed ML</li>
+              <li><span class="ai-highlight">Explainable AI (XAI)</span> - Making AI decisions interpretable</li>
+              <li><span class="ai-highlight">Edge AI</span> - Optimizing models for mobile and IoT devices</li>
+              <li><span class="ai-highlight">AI Ethics</span> - Responsible AI development and bias mitigation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>

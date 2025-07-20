@@ -1,0 +1,302 @@
+<div class="accordion-container">
+    <div class="accordion-content">
+        <div class="accordion-wrapper">
+
+            <!-- AI/ML Professional Highlights -->
+            <div class="custom-accordion-item">
+                <div class="custom-accordion-header" (click)="toggleSection('highlights')">
+                    <h3 class="custom-accordion-title">AI/ML Professional Highlights</h3>
+                    <span class="custom-accordion-icon" [class.expanded]="expandedSections['highlights']">▼</span>
+                </div>
+                <div class="custom-accordion-content" [class.show]="expandedSections['highlights']">
+                    <div class="accordion-text">
+                        <ul>
+                            <li><span class="ai-highlight">7+ years</span> of technology experience with <span
+                                    class="ai-highlight">4
+                                    years specializing in AI/ML engineering</span> and production-grade intelligent
+                                systems.</li>
+                            <li>Architected and deployed <span class="ai-highlight">20+ machine learning models</span>
+                                including <span class="ai-highlight">computer vision</span>, <span
+                                    class="ai-highlight">NLP pipelines</span>, and
+                                <span class="ai-highlight">recommendation systems</span>.
+                            </li>
+                            <li>Expert in <span class="ai-highlight">MLOps practices</span> using <span
+                                    class="ai-highlight">Azure
+                                    ML</span>, <span class="ai-highlight">MLflow</span>, and <span
+                                    class="ai-highlight">Kubeflow</span>
+                                for scalable model deployment and monitoring.</li>
+                            <li>Built end-to-end <span class="ai-highlight">data pipelines</span> processing <span
+                                    class="ai-highlight">millions of records daily</span> using <span
+                                    class="ai-highlight">Apache
+                                    Spark</span> and <span class="ai-highlight">Azure Data Factory</span>.</li>
+                            <li>Integrated <span class="ai-highlight">Large Language Models (LLMs)</span> and <span
+                                    class="ai-highlight">Generative AI</span> solutions into enterprise applications
+                                using <span class="ai-highlight">OpenAI APIs</span> and <span class="ai-highlight">Azure
+                                    Cognitive
+                                    Services</span>.</li>
+                            <li>Led <span class="ai-highlight">AI transformation initiatives</span> improving business
+                                processes by
+                                <span class="ai-highlight">40% efficiency gains</span> through intelligent automation.
+                            </li>
+                            <li>Mentored <span class="ai-highlight">cross-functional teams</span> on AI adoption, <span
+                                    class="ai-highlight">responsible AI practices</span>, and <span
+                                    class="ai-highlight">ethical machine
+                                    learning</span> implementation.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI/ML Technologies & Tools -->
+            <div class="custom-accordion-item">
+                <div class="custom-accordion-header" (click)="toggleSection('technologies')">
+                    <h3 class="custom-accordion-title">AI/ML Technologies & Tools</h3>
+                    <span class="custom-accordion-icon" [class.expanded]="expandedSections['technologies']">▼</span>
+                </div>
+                <div class="custom-accordion-content" [class.show]="expandedSections['technologies']">
+                    <div class="tech-board">
+                        <!-- AI/ML Frameworks -->
+                        <div class="tech-cell ai-tech"><i class="devicon-python-plain colored" title="Python"></i></div>
+                        <div class="tech-cell ai-tech"><i class="devicon-tensorflow-original colored"
+                                title="TensorFlow"></i></div>
+                        <div class="tech-cell ai-tech"><i class="devicon-pytorch-original colored" title="PyTorch"></i>
+                        </div>
+                        <div class="tech-cell ai-tech"><i class="devicon-numpy-plain colored" title="NumPy"></i></div>
+
+                        <!-- Data Science -->
+                        <div class="tech-cell data-tech"><i class="devicon-pandas-plain" title="Pandas"></i></div>
+                        <div class="tech-cell data-tech"><i class="devicon-jupyter-plain-wordmark colored"
+                                title="Jupyter"></i>
+                        </div>
+                        <div class="tech-cell data-tech"><i class="devicon-opencv-plain colored" title="OpenCV"></i>
+                        </div>
+                        <div class="tech-cell data-tech"><i class="devicon-anaconda-original colored"
+                                title="Anaconda"></i></div>
+
+                        <!-- Cloud AI -->
+                        <div class="tech-cell cloud-tech"><i class="devicon-azure-plain colored" title="Azure ML"></i>
+                        </div>
+                        <div class="tech-cell cloud-tech"><i class="devicon-googlecloud-plain colored"
+                                title="Google Cloud AI"></i>
+                        </div>
+                        <div class="tech-cell cloud-tech"><i class="devicon-amazonwebservices-plain-wordmark colored"
+                                title="AWS SageMaker"></i></div>
+                        <div class="tech-cell cloud-tech"><i class="devicon-docker-plain-wordmark colored"
+                                title="Docker"></i></div>
+
+                        <!-- Development Tools -->
+                        <div class="tech-cell dev-tech"><i class="devicon-git-plain-original" title="Git"></i></div>
+                        <div class="tech-cell dev-tech"><i class="devicon-vscode-plain-wordmark colored"
+                                title="VS Code"></i></div>
+                        <div class="tech-cell dev-tech"><i class="devicon-github-original-wordmark" title="GitHub"></i>
+                        </div>
+                        <div class="tech-cell dev-tech"><i class="devicon-kubernetes-plain colored"
+                                title="Kubernetes"></i></div>
+
+                        <!-- Traditional Tech Stack -->
+                        <div class="tech-cell traditional-tech"><i class="devicon-dotnetcore-plain colored"
+                                title=".NET Core"></i>
+                        </div>
+                        <div class="tech-cell traditional-tech"><i class="devicon-angular-plain colored"
+                                title="Angular"></i></div>
+                        <div class="tech-cell traditional-tech"><i class="devicon-typescript-plain colored"
+                                title="TypeScript"></i>
+                        </div>
+                        <div class="tech-cell traditional-tech"><i class="devicon-azuresqldatabase-plain colored"
+                                title="SQL Server"></i></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI/ML Experience -->
+            <div class="custom-accordion-item">
+                <div class="custom-accordion-header" (click)="toggleSection('experience')">
+                    <h3 class="custom-accordion-title">AI/ML Experience</h3>
+                    <span class="custom-accordion-icon" [class.expanded]="expandedSections['experience']">▼</span>
+                </div>
+                <div class="custom-accordion-content" [class.show]="expandedSections['experience']">
+
+                    <!-- Senior AI/ML Engineer - Globant India -->
+                    <div class="experience-item">
+                        <div class="experience-header" (click)="toggleSection('globant')">
+                            <h4 class="experience-title">Senior AI/ML Engineer - Globant India</h4>
+                            <span class="custom-accordion-icon small"
+                                [class.expanded]="expandedSections['globant']">▼</span>
+                        </div>
+                        <div class="experience-content" [class.show]="expandedSections['globant']">
+                            <div class="accordion-text">
+                                <p class="ai-exp-text">May 2022 – Present</p>
+                                <ul>
+                                    <li>Architected and deployed <span class="ai-highlight">computer vision
+                                            models</span> for medical
+                                        imaging analysis achieving <span class="ai-highlight">95% accuracy</span>.</li>
+                                    <li>Built <span class="ai-highlight">NLP pipelines</span> for document processing
+                                        and sentiment analysis
+                                        using <span class="ai-highlight">BERT</span> and <span class="ai-highlight">GPT
+                                            models</span>.</li>
+                                    <li>Implemented <span class="ai-highlight">MLOps workflows</span> using <span
+                                            class="ai-highlight">Azure
+                                            ML</span> and <span class="ai-highlight">MLflow</span> for automated model
+                                        training and deployment.
+                                    </li>
+                                    <li>Developed <span class="ai-highlight">real-time inference systems</span> handling
+                                        <span class="ai-highlight">10,000+ requests/second</span> using <span
+                                            class="ai-highlight">FastAPI</span>
+                                        and <span class="ai-highlight">Redis caching</span>.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ML Engineer - CitiusTech Healthcare -->
+                    <div class="experience-item">
+                        <div class="experience-header" (click)="toggleSection('citiustech')">
+                            <h4 class="experience-title">ML Engineer - CitiusTech Healthcare</h4>
+                            <span class="custom-accordion-icon small"
+                                [class.expanded]="expandedSections['citiustech']">▼</span>
+                        </div>
+                        <div class="experience-content" [class.show]="expandedSections['citiustech']">
+                            <div class="accordion-text">
+                                <p class="ai-exp-text">Jun 2021 - Apr 2022</p>
+                                <ul>
+                                    <li>Designed <span class="ai-highlight">predictive models</span> for patient risk
+                                        assessment using <span class="ai-highlight">ensemble methods</span> and <span
+                                            class="ai-highlight">time-series
+                                            analysis</span>.</li>
+                                    <li>Optimized <span class="ai-highlight">feature engineering pipelines</span>
+                                        reducing model training
+                                        time by <span class="ai-highlight">60%</span> using <span
+                                            class="ai-highlight">Apache Spark</span>.
+                                    </li>
+                                    <li>Implemented <span class="ai-highlight">HIPAA-compliant data processing</span>
+                                        workflows for
+                                        sensitive healthcare data.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Data Scientist - Independent Projects -->
+                    <div class="experience-item">
+                        <div class="experience-header" (click)="toggleSection('independent')">
+                            <h4 class="experience-title">Data Scientist - Independent Projects</h4>
+                            <span class="custom-accordion-icon small"
+                                [class.expanded]="expandedSections['independent']">▼</span>
+                        </div>
+                        <div class="experience-content" [class.show]="expandedSections['independent']">
+                            <div class="accordion-text">
+                                <p class="ai-exp-text">2020 - 2021</p>
+                                <ul>
+                                    <li>Built <span class="ai-highlight">recommendation systems</span> using <span
+                                            class="ai-highlight">collaborative filtering</span> and <span
+                                            class="ai-highlight">deep learning
+                                            embeddings</span>.</li>
+                                    <li>Developed <span class="ai-highlight">financial forecasting models</span> using
+                                        <span class="ai-highlight">LSTM networks</span> and <span
+                                            class="ai-highlight">technical indicators</span>.
+                                    </li>
+                                    <li>Created <span class="ai-highlight">automated trading algorithms</span> with
+                                        <span class="ai-highlight">risk management</span> and <span
+                                            class="ai-highlight">backtesting
+                                            frameworks</span>.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Full-Stack Developer -->
+                    <div class="experience-item">
+                        <div class="experience-header" (click)="toggleSection('fullstack')">
+                            <h4 class="experience-title">Full-Stack Developer (Pre-AI Career)</h4>
+                            <span class="custom-accordion-icon small"
+                                [class.expanded]="expandedSections['fullstack']">▼</span>
+                        </div>
+                        <div class="experience-content" [class.show]="expandedSections['fullstack']">
+                            <div class="accordion-text">
+                                <p class="ai-exp-text">2018 - 2020</p>
+                                <ul>
+                                    <li>Developed <span class="ai-highlight">enterprise web applications</span> using
+                                        <span class="ai-highlight">.NET Core</span>, <span
+                                            class="ai-highlight">Angular</span>, and <span class="ai-highlight">SQL
+                                            Server</span>.</li>
+                                    <li>Built <span class="ai-highlight">RESTful APIs</span> and <span
+                                            class="ai-highlight">microservices
+                                            architecture</span> supporting <span class="ai-highlight">millions of
+                                            transactions</span>.</li>
+                                    <li>Implemented <span class="ai-highlight">CI/CD pipelines</span> using <span
+                                            class="ai-highlight">Azure
+                                            DevOps</span> reducing deployment time by <span
+                                            class="ai-highlight">80%</span>.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education & Certifications -->
+            <div class="custom-accordion-item">
+                <div class="custom-accordion-header" (click)="toggleSection('education')">
+                    <h3 class="custom-accordion-title">Education & AI Certifications</h3>
+                    <span class="custom-accordion-icon" [class.expanded]="expandedSections['education']">▼</span>
+                </div>
+                <div class="custom-accordion-content" [class.show]="expandedSections['education']">
+                    <div class="accordion-text">
+                        <ul>
+                            <li><span class="ai-highlight">Master of Computer Applications (MCA)</span> - Pune
+                                University (2018)</li>
+                            <li><span class="ai-highlight">Azure AI Engineer Associate</span> - Microsoft Certified</li>
+                            <li><span class="ai-highlight">TensorFlow Developer Certificate</span> - Google</li>
+                            <li><span class="ai-highlight">Deep Learning Specialization</span> - Coursera (Andrew Ng)
+                            </li>
+                            <li><span class="ai-highlight">Machine Learning Engineering for Production (MLOps)</span> -
+                                Coursera</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Languages & Communication -->
+            <div class="custom-accordion-item">
+                <div class="custom-accordion-header" (click)="toggleSection('languages')">
+                    <h3 class="custom-accordion-title">Languages & Communication</h3>
+                    <span class="custom-accordion-icon" [class.expanded]="expandedSections['languages']">▼</span>
+                </div>
+                <div class="custom-accordion-content" [class.show]="expandedSections['languages']">
+                    <div class="accordion-text">
+                        <ul>
+                            <li><span class="ai-highlight">English</span> - Professional working proficiency</li>
+                            <li><span class="ai-highlight">Hindi</span> - Native speaker</li>
+                            <li><span class="ai-highlight">Marathi</span> - Native speaker</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Research & Interests -->
+            <div class="custom-accordion-item">
+                <div class="custom-accordion-header" (click)="toggleSection('research')">
+                    <h3 class="custom-accordion-title">AI Research & Interests</h3>
+                    <span class="custom-accordion-icon" [class.expanded]="expandedSections['research']">▼</span>
+                </div>
+                <div class="custom-accordion-content" [class.show]="expandedSections['research']">
+                    <div class="accordion-text">
+                        <ul>
+                            <li><span class="ai-highlight">Multimodal AI</span> - Combining vision, language, and speech
+                                models</li>
+                            <li><span class="ai-highlight">Federated Learning</span> - Privacy-preserving distributed ML
+                            </li>
+                            <li><span class="ai-highlight">Explainable AI (XAI)</span> - Making AI decisions
+                                interpretable</li>
+                            <li><span class="ai-highlight">Edge AI</span> - Optimizing models for mobile and IoT devices
+                            </li>
+                            <li><span class="ai-highlight">AI Ethics</span> - Responsible AI development and bias
+                                mitigation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
