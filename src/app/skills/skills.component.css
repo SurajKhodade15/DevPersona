@@ -1,14 +1,236 @@
-.default-topic {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #e2e24d;
-  margin-bottom: 1rem;
-  white-space: nowrap; /* Prevent text from wrapping */
-  overflow: hidden;     /* Optional: hide overflow */
-  text-overflow: ellipsis; /* Optional: show "..." if it overflows */
+/* Main Container */
+.skills-container {
+  min-height: calc(100vh - 12%);
+  background-color: #1e1e1e;
+  background-image:
+    linear-gradient(145deg, rgba(0, 0, 0, 0.8) 0%, rgba(89, 89, 97, 0.8) 100%),
+    repeating-linear-gradient(0deg,
+      rgba(255, 255, 255, 0.02),
+      rgba(255, 255, 255, 0.02) 1px,
+      transparent 1px,
+      transparent 2px),
+    url('../../assets/ai-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
+
+/* Content Container */
+.skills-content {
+  max-width: 1200px;
+  width: 100%;
+  backdrop-filter: blur(15px);
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  padding: 50px 60px;
+  position: relative;
+}
+
+.skills-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg,
+      rgba(0, 212, 255, 0.05) 0%,
+      rgba(0, 255, 136, 0.05) 50%,
+      rgba(0, 212, 255, 0.05) 100%);
+  border-radius: 20px;
+  pointer-events: none;
+}
+
+/* Content Section */
+.content-section {
+  position: relative;
+  z-index: 1;
+}
+
+/* Typography */
+.skills-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #00D4FF;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  text-align: center;
+  background: linear-gradient(135deg, #00D4FF, #00FF88);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #00D4FF;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+
+.skills-description {
+  color: #F5F5F5;
+  line-height: 1.8;
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Accordion Wrapper */
+.accordion-wrapper {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 15px;
+  padding: 20px;
+  border: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .skills-content {
+    padding: 40px 40px;
+    margin: 0 15px;
+  }
+
+  .skills-title {
+    font-size: 2.2rem;
+  }
+
+  .skills-description {
+    font-size: 1.1rem;
+    padding: 1.2rem 1.5rem;
+  }
+}
+
 @media (max-width: 768px) {
-  .default-topic {
-    font-size: 1.3rem;
+  .skills-container {
+    padding: 40px 15px;
+    background-attachment: scroll;
+  }
+
+  .skills-content {
+    padding: 30px 25px;
+    margin: 0 10px;
+    border-radius: 15px;
+  }
+
+  .skills-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .skills-description {
+    font-size: 1rem;
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+
+  .accordion-wrapper {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-container {
+    padding: 20px 10px;
+  }
+
+  .skills-content {
+    padding: 20px 15px;
+  }
+
+  .skills-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .skills-description {
+    font-size: 0.95rem;
+    padding: 1rem;
+    line-height: 1.6;
+  }
+
+  .accordion-wrapper {
+    padding: 12px;
+  }
+}
+
+/* Animation for content loading */
+.content-section {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.accordion-wrapper {
+  animation: slideInUp 1s ease-out;
+  animation-delay: 0.3s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Enhanced focus states for accessibility */
+.accordion-wrapper:focus-within {
+  border-color: rgba(0, 212, 255, 0.5);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+}
+
+/* Smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Title animation */
+.skills-title {
+  animation: titleGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes titleGlow {
+  from {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  to {
+    text-shadow:
+      2px 2px 4px rgba(0, 0, 0, 0.8),
+      0 0 20px rgba(0, 212, 255, 0.3);
   }
 }
