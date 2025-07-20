@@ -22,7 +22,7 @@
 
 /* Content Container */
 .accordion-content {
-  max-width: 1000px;
+  /* max-width: 1000px; */
   width: 100%;
   backdrop-filter: blur(15px);
   background: rgba(0, 0, 0, 0.7);
