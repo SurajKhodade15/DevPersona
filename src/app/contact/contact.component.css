@@ -88,15 +88,18 @@
 
 /* Standardized Contact Title */
 .contact-title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 800;
   background: linear-gradient(135deg, #00D4FF 0%, #00FF88 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin: 0;
+  margin: 20px 0;
+  padding: 15px 0;
   text-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
   letter-spacing: -1px;
+  line-height: 1.2;
+  overflow: visible;
   position: relative;
   z-index: 2;
 }
@@ -309,7 +312,10 @@
   }
 
   .contact-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    margin: 15px 0 20px 0;
+    padding: 10px 0;
+    line-height: 1.1;
     letter-spacing: -0.5px;
   }
 
@@ -368,7 +374,10 @@
   }
 
   .contact-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    margin: 10px 0 15px 0;
+    padding: 8px 0;
+    line-height: 1.1;
   }
 
   .default-highlight {
