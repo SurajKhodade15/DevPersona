@@ -1,4 +1,4 @@
-/* Standardized Portfolio Wrapper */
+/* Standardized Main Container */
 .portfolio-wrapper {
   min-height: calc(100vh - 72px);
   /* Account for header height */
@@ -8,6 +8,9 @@
   background-position: center;
   background-attachment: fixed;
   padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   font-family: 'Inter', 'Segoe UI', sans-serif;
 }
@@ -26,11 +29,10 @@
   pointer-events: none;
 }
 
-/* Standardized Portfolio Container */
+/* Standardized Content Container */
 .portfolio-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 20px;
+  max-width: 1200px;
+  width: 100%;
   position: relative;
   z-index: 1;
 }
@@ -46,21 +48,18 @@
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
-/* Standardized AI Portfolio Title */
+/* Standardized Main Title */
 .ai-portfolio-title {
   font-size: 2.5rem;
-  font-weight: 800;
+  font-weight: 700;
   background: linear-gradient(135deg, #00D4FF 0%, #00FF88 50%, #00D4FF 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
-  margin: 30px 0 40px 0;
-  padding: 20px 0;
-  text-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
-  letter-spacing: -1px;
+  margin: 0 0 30px 0;
+  text-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
   line-height: 1.2;
-  overflow: visible;
 }
 
 /* Portfolio Introduction */
@@ -74,7 +73,7 @@
   line-height: 1.8;
   color: #F5F5F5;
   max-width: 900px;
-  margin: 0 auto 40px;
+  margin: 0 auto 50px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
@@ -139,6 +138,78 @@
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
+/* Responsive Design - Standardized */
+@media (max-width: 1200px) {
+  .content {
+    padding: 50px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-wrapper {
+    padding: 40px 15px;
+    background-attachment: scroll;
+    min-height: calc(100vh - 60px);
+  }
+
+  .content {
+    padding: 40px 25px;
+    border-radius: 15px;
+  }
+  
+  .ai-portfolio-title {
+    font-size: 2rem;
+    line-height: 2.6rem;
+  }
+  
+  .intro-text {
+    font-size: 1rem;
+  }
+  
+  .focus-areas {
+    gap: 15px;
+  }
+  
+  .focus-item {
+    min-width: 100px;
+    padding: 15px 10px;
+  }
+  
+  .focus-text {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-wrapper {
+    padding: 30px 10px;
+  }
+
+  .content {
+    padding: 30px 20px;
+  }
+  
+  .ai-portfolio-title {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+  }
+  
+  .intro-text {
+    font-size: 0.95rem;
+  }
+  
+  .focus-areas {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .focus-item {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
 /* Projects Grid */
 .projects-grid {
   display: grid;
@@ -153,22 +224,6 @@
 
 .project-card-wrapper:hover {
   transform: translateY(-10px);
-}
-
-/* Responsive Design */
-@media (max-width: 1200px) {
-  .portfolio-container {
-    max-width: 1200px;
-  }
-
-  .content {
-    padding: 50px 40px;
-  }
-
-  .projects-grid {
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 25px;
-  }
 }
 
 @media (max-width: 768px) {
