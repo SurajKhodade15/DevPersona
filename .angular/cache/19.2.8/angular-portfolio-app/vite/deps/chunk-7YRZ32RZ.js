@@ -1,10 +1,10 @@
 import {
   BidiModule
-} from "./chunk-7VXQYKQU.js";
+} from "./chunk-QEKM3AJH.js";
 import {
   DOCUMENT,
   isPlatformBrowser
-} from "./chunk-RHW7O6XK.js";
+} from "./chunk-YDTX7RWU.js";
 import {
   APP_ID,
   ApplicationRef,
@@ -58,7 +58,7 @@ import {
   ɵɵdefineInjectable,
   ɵɵdefineInjector,
   ɵɵdefineNgModule
-} from "./chunk-W6CC4APZ.js";
+} from "./chunk-U5BE6AW3.js";
 import {
   __spreadValues
 } from "./chunk-WDMUDEB6.js";
@@ -3254,9 +3254,6 @@ var MatCommonModule = class _MatCommonModule {
 })();
 
 export {
-  coerceNumberProperty,
-  coerceElement,
-  coerceArray,
   isFakeMousedownFromScreenReader,
   isFakeTouchstartFromScreenReader,
   BACKSPACE,
@@ -3272,9 +3269,12 @@ export {
   _bindEventWithOptions,
   Platform,
   normalizePassiveListenerOptions,
+  coerceNumberProperty,
+  coerceElement,
   FocusMonitor,
   _CdkPrivateStyleLoader,
   _VisuallyHiddenLoader,
+  coerceArray,
   InteractivityChecker,
   FocusTrapFactory,
   A11yModule,
@@ -3283,4 +3283,4 @@ export {
   FocusKeyManager,
   MatCommonModule
 };
-//# sourceMappingURL=chunk-5NEDVGWB.js.map
+//# sourceMappingURL=chunk-7YRZ32RZ.js.map
