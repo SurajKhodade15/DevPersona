@@ -33,7 +33,7 @@
 
 /* Standardized Content Container */
 .about-content {
-  max-width: 1400px;
+  max-width: 1200px;
   width: 100%;
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(20px);
@@ -324,123 +324,125 @@
 
   .cta-button {
     padding: 0.8rem 1.5rem;
+  }
+}
 
-    /* Responsive Design */
-    @media (max-width: 1200px) {
-      .about-content {
-        padding: 50px 40px;
-        max-width: 1200px;
-      }
-    }
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .about-content {
+    padding: 50px 40px;
+    max-width: 1200px;
+  }
+}
 
-    @media (max-width: 768px) {
-      .about-container {
-        padding: 40px 15px;
-        background-attachment: scroll;
-        min-height: calc(100vh - 60px);
-      }
+@media (max-width: 768px) {
+  .about-container {
+    padding: 40px 15px;
+    background-attachment: scroll;
+    min-height: calc(100vh - 60px);
+  }
 
-      .about-content {
-        padding: 40px 25px;
-        border-radius: 15px;
-      }
+  .about-content {
+    padding: 40px 25px;
+    border-radius: 15px;
+  }
 
-      .about-title {
-        font-size: 2.5rem;
-        margin-bottom: 30px;
-      }
+  .about-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
 
-      .about-paragraph {
-        font-size: 1rem;
-        padding: 1rem 1.5rem;
-      }
+  .about-paragraph {
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+  }
 
-      .about-picture {
-        width: 200px;
-        height: 200px;
-      }
+  .about-picture {
+    width: 200px;
+    height: 200px;
+  }
 
-      .cta-button {
-        padding: 12px 25px;
-        font-size: 1rem;
-      }
-    }
+  .cta-button {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+}
 
-    @media (max-width: 480px) {
-      .about-container {
-        padding: 30px 10px;
-      }
+@media (max-width: 480px) {
+  .about-container {
+    padding: 30px 10px;
+  }
 
-      .about-content {
-        padding: 30px 20px;
-      }
+  .about-content {
+    padding: 30px 20px;
+  }
 
-      .about-title {
-        font-size: 2rem;
-        letter-spacing: -0.5px;
-      }
+  .about-title {
+    font-size: 2rem;
+    letter-spacing: -0.5px;
+  }
 
-      .about-paragraph {
-        font-size: 0.95rem;
-        padding: 0.8rem 1.2rem;
-      }
+  .about-paragraph {
+    font-size: 0.95rem;
+    padding: 0.8rem 1.2rem;
+  }
 
-      .about-picture {
-        width: 160px;
-        height: 160px;
-      }
+  .about-picture {
+    width: 160px;
+    height: 160px;
+  }
 
-      .cta-button {
-        padding: 10px 20px;
-        font-size: 0.95rem;
-      }
-    }
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+}
 
-    /* Animation for content loading */
-    .content-section {
-      animation: fadeInUp 0.8s ease-out;
-    }
+/* Animation for content loading */
+.content-section {
+  animation: fadeInUp 0.8s ease-out;
+}
 
-    .contact-section {
-      animation: fadeInUp 1s ease-out;
-    }
+.contact-section {
+  animation: fadeInUp 1s ease-out;
+}
 
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
 
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-    /* Smooth scrolling behavior */
-    html {
-      scroll-behavior: smooth;
-    }
+/* Smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
 
-    /* Enhanced focus states for accessibility */
-    .cta-button:focus {
-      outline: 3px solid rgba(0, 212, 255, 0.5);
-      outline-offset: 2px;
-    }
+/* Enhanced focus states for accessibility */
+.cta-button:focus {
+  outline: 3px solid rgba(0, 212, 255, 0.5);
+  outline-offset: 2px;
+}
 
-    /* Loading animation for images */
-    .about-picture {
-      animation: imageLoad 1s ease-out;
-    }
+/* Loading animation for images */
+.about-picture {
+  animation: imageLoad 1s ease-out;
+}
 
-    @keyframes imageLoad {
-      from {
-        opacity: 0;
-        transform: scale(0.95);
-      }
+@keyframes imageLoad {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
 
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

@@ -13,7 +13,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px 20px;
+  padding: 80px 20px;
   font-family: 'Inter', 'Segoe UI', sans-serif;
   position: relative;
 }
@@ -39,7 +39,7 @@
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(20px);
   border: 2px solid rgba(0, 212, 255, 0.3);
-  padding: 40px 40px;
+  padding: 60px 50px;
   border-radius: 20px;
   text-align: center;
   color: #F5F5F5;
@@ -423,7 +423,7 @@
     font-size: 2rem;
     margin: 15px 0 10px 0;
     padding: 10px 0 5px 0;
-    line-height: 1.1;
+    line-height: 2.6rem;
     letter-spacing: -0.5px;
   }
 
