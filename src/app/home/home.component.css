@@ -31,7 +31,7 @@
 
 /* Standardized Content Container */
 .home-content {
-  max-width: 1400px;
+  max-width: 1200px;
   width: 100%;
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(20px);
