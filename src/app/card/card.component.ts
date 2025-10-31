@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Card } from '../_models/card';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalComponent } from '../modal/modal.component';
@@ -6,7 +7,7 @@ import { ModalComponent } from '../modal/modal.component';
 @Component({
   selector: 'app-project-card',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.css'],
 })

@@ -13,177 +13,147 @@ import { Tag } from '../_models/tags';
 })
 export class PortfolioComponent {
   projects: Card[] = [
+    // Reordered and updated to match requested sequence; descriptions expanded and tags enriched
     {
       id: 1,
-      name: 'Medical Diagnosis AI System',
-      summary: 'Deep learning model for automated medical image analysis and disease detection.',
-      description: 'Developed a comprehensive medical diagnosis system using TensorFlow and PyTorch for analyzing medical images (X-rays, CT scans, MRI). Implemented convolutional neural networks with attention mechanisms for early detection of pneumonia, fractures, and tumors. Achieved 94% accuracy through transfer learning with ResNet and EfficientNet. Deployed using Azure ML Studio with real-time inference APIs. Integrated DICOM image processing and HIPAA-compliant data handling.',
-      projectLink: 'https://github.com/SurajKhodade15/medical-ai-diagnosis',
-      tags: [
-        Tag.PYTHON,
-        Tag.TENSORFLOW,
-        Tag.PYTORCH,
-        Tag.OPENCV,
-        Tag.AZURE,
-        Tag.MACHINELEARNING,
-        Tag.DEEPLEARNING,
-        Tag.RESTAPI
-      ]
+      name: 'Employee-Project Alignment Engine (Recommender)',
+      summary: 'Recommender that semantically matches employee skills to project needs.',
+      description: 'Semantic search recommender using embeddings and transformer-based encoders to match employee profiles (skills, experience, certifications) with project requirements. Includes taxonomic skill normalization, confidence scoring, and a human-in-the-loop review workflow. Built with Python, vector stores for retrieval, and lightweight LLM prompts for explainability. Impact: reduced time-to-staff and improved match quality across pilots. Focus: ML, NLP, LLM, MCP, Agentic AI.',
+      projectLink: 'https://github.com/SurajKhodade15/employee_project_allignment_engine_nlp',
+      tags: [Tag.PYTHON, Tag.NLP, Tag.LLM, Tag.GENAI, Tag.MACHINELEARNING, Tag.GIT, Tag.MCP]
     },
     {
       id: 2,
-      name: 'Healthcare Predictive Analytics',
-      summary: 'ML pipeline for patient outcome prediction and risk assessment.',
-      description: 'Built a comprehensive healthcare analytics platform using Python, scikit-learn, and Azure ML. Developed predictive models for patient readmission risk, treatment outcome forecasting, and resource allocation optimization. Implemented feature engineering for EHR data, time-series analysis for vital signs, and ensemble methods achieving 91% accuracy. Created HIPAA-compliant data pipelines with automated model retraining and monitoring dashboards.',
-      projectLink: 'https://github.com/SurajKhodade15/healthcare-ml',
-      tags: [
-        Tag.PYTHON,
-        Tag.SCIKITLEARN,
-        Tag.PANDAS,
-        Tag.NUMPY,
-        Tag.MACHINELEARNING,
-        Tag.AZURE,
-        Tag.JUPYTER,
-        Tag.MATPLOTLIB
-      ]
+      name: 'Payroll Gen AI Query Assistant',
+      summary: 'LLM-powered assistant for payroll and HR queries with document retrieval.',
+      description: 'LLM-driven conversational assistant for payroll and HR queries. Combines vector-store retrieval over payroll documents, redaction/compliance controls, and a safe-generation pipeline. Built as a modular agentic service with audit logs and role-based access. Reduced HR ticket volume by routing common queries to the assistant. Focus: Gen AI, LLM, Agentic AI, MCP.',
+      projectLink: 'https://github.com/SurajKhodade15/payroll_query_assistance_genai',
+      tags: [Tag.PYTHON, Tag.FASTAPI, Tag.LLM, Tag.GENAI, Tag.AGENTIC, Tag.GIT]
     },
     {
       id: 3,
-      name: 'Computer Vision for Retail',
-      summary: 'Real-time object detection and inventory management using deep learning.',
-      description: 'Developed an end-to-end computer vision solution for retail inventory management using YOLO v5 and OpenCV. Implemented real-time product detection, shelf monitoring, and automated stock counting. Built custom datasets with 50,000+ annotated images and achieved 96% mAP. Deployed using Azure Container Instances with REST APIs for integration with existing POS systems. Included customer behavior analysis and heat mapping.',
-      projectLink: 'https://github.com/SurajKhodade15/retail-cv',
-      tags: [
-        Tag.PYTHON,
-        Tag.PYTORCH,
-        Tag.OPENCV,
-        Tag.DEEPLEARNING,
-        Tag.AZURE,
-        Tag.DOCKER,
-        Tag.RESTAPI,
-        Tag.TENSORFLOW
-      ]
+      name: 'Invoice Summarization and Chatbot Assistant',
+      summary: 'Generative AI assistant to summarize invoices and answer finance queries.',
+      description: 'Generative AI pipeline to extract structured line-items from invoices, produce concise summaries, and power a conversational assistant for finance teams. Includes OCR, field extraction, confidence scores, and XLS/CSV export. Uses transformer models for abstractive summarization and retrieval-augmented generation for Q&A. Focus: Gen AI, NLP, LLM.',
+      projectLink: 'https://github.com/SurajKhodade15/invoice_summarization_genai',
+      tags: [Tag.PYTHON, Tag.GENAI, Tag.LLM, Tag.FASTAPI, Tag.PANDAS, Tag.GIT]
     },
     {
       id: 4,
-      name: 'NLP Sentiment Analysis Engine',
-      summary: 'Multi-language sentiment analysis with transformer models.',
-      description: 'Created a sophisticated NLP engine using BERT, RoBERTa, and custom transformer architectures for real-time sentiment analysis across multiple languages. Processed social media data, customer reviews, and feedback forms. Implemented attention visualization, emotion detection, and topic modeling. Achieved 94% accuracy on multilingual datasets with support for English, Spanish, French, and German. Deployed using FastAPI and Azure Functions.',
-      projectLink: 'https://github.com/SurajKhodade15/nlp-sentiment',
-      tags: [
-        Tag.PYTHON,
-        Tag.TENSORFLOW,
-        Tag.PYTORCH,
-        Tag.NLTK,
-        Tag.SPACY,
-        Tag.FASTAPI,
-        Tag.AZURE,
-        Tag.DEEPLEARNING
-      ]
+      name: 'Generative AI–Powered Web Data Summarization',
+      summary: 'Pipeline to scrape, process and summarize web content using LLMs.',
+      description: 'End-to-end pipeline that scrapes web proposals and product pages, cleans and normalizes content, and uses LLMs to generate structured summaries (title, scope, budget, deadlines). Includes rate-limited scrapers, heuristics for noise reduction, and vector-indexed retrieval for incremental updates. Focus: Gen AI, MCP, LLM, Data Engineering.',
+      projectLink: 'https://github.com/SurajKhodade15/web_data_summarization_genai',
+      tags: [Tag.PYTHON, Tag.BEAUTIFULSOUP, Tag.GENAI, Tag.LLM, Tag.MCP, Tag.GIT]
     },
     {
       id: 5,
-      name: 'AI-Powered Drug Discovery',
-      summary: 'Machine learning platform for molecular property prediction and drug design.',
-      description: 'Developed a comprehensive drug discovery platform using graph neural networks and molecular descriptors. Implemented ADMET property prediction, drug-target interaction modeling, and molecular generation using GANs. Built custom datasets from ChEMBL and PubChem with 2M+ compounds. Achieved significant improvement in lead compound identification and reduced screening time by 60%. Integrated with pharmaceutical research workflows.',
-      projectLink: 'https://github.com/SurajKhodade15/ai-drug-discovery',
-      tags: [
-        Tag.PYTHON,
-        Tag.TENSORFLOW,
-        Tag.PYTORCH,
-        Tag.MACHINELEARNING,
-        Tag.DEEPLEARNING,
-        Tag.PANDAS,
-        Tag.NUMPY,
-        Tag.JUPYTER
-      ]
+      name: 'US Healthcare Insurance Claim Fraud Analysis',
+      summary: 'NLP + ML classifiers to detect potentially fraudulent insurance claims.',
+      description: 'Hybrid NLP and ML system for insurance claim fraud detection. Extracted textual and numerical features from claims, applied NLP embeddings and engineered domain features, then trained ensemble classifiers (XGBoost, CatBoost). Provided analyst-facing dashboards and active learning loops to improve label quality. Focus: ML, NLP.',
+      projectLink: 'https://github.com/SurajKhodade15/us-healthcare-claims-fraud-ml',
+      tags: [Tag.PYTHON, Tag.SCIKITLEARN, Tag.NLP, Tag.PANDAS, Tag.MACHINELEARNING, Tag.MATPLOTLIB, Tag.GIT]
     },
     {
       id: 6,
-      name: 'Smart Healthcare Chatbot',
-      summary: 'Conversational AI for medical consultation and symptom analysis.',
-      description: 'Built an intelligent healthcare chatbot using natural language processing and medical knowledge graphs. Implemented symptom checker, medication reminders, appointment scheduling, and emergency detection. Used BERT for intent recognition and trained on medical literature and diagnostic guidelines. Integrated with telemedicine platforms and achieved 88% accuracy in symptom-to-condition mapping. HIPAA-compliant with end-to-end encryption.',
-      projectLink: 'https://github.com/SurajKhodade15/medical-chatbot',
-      tags: [
-        Tag.PYTHON,
-        Tag.TENSORFLOW,
-        Tag.NLTK,
-        Tag.SPACY,
-        Tag.FASTAPI,
-        Tag.AZURE,
-        Tag.DEEPLEARNING,
-        Tag.RESTAPI
-      ]
+      name: 'Employee Feedback Sentiment Analysis',
+      summary: 'NLP-based sentiment classifier for employee feedback and surveys.',
+      description: 'NLP pipeline for sentiment classification and topic extraction from employee feedback and exit interviews. Combines transformer embeddings, rule-based redaction, and an explainability layer to surface drivers of sentiment. Delivered dashboards to HR for action plans. Focus: NLP, ML.',
+      projectLink: 'https://github.com/SurajKhodade15/employee-feedback-sentiment',
+      tags: [Tag.PYTHON, Tag.SCIKITLEARN, Tag.NLP, Tag.SPACY, Tag.JUPYTER, Tag.GIT]
     },
     {
       id: 7,
-      name: 'Time Series Forecasting Platform',
-      summary: 'Advanced forecasting models for business and healthcare metrics.',
-      description: 'Developed a comprehensive time series forecasting platform using LSTM, GRU, and Transformer models. Implemented forecasting for patient census, equipment utilization, and resource demand in healthcare settings. Built automated feature engineering, model selection, and hyperparameter optimization. Achieved 15% improvement in forecast accuracy over traditional methods. Deployed with real-time monitoring and automated retraining pipelines.',
-      projectLink: 'https://github.com/SurajKhodade15/timeseries-forecast',
-      tags: [
-        Tag.PYTHON,
-        Tag.TENSORFLOW,
-        Tag.PYTORCH,
-        Tag.PANDAS,
-        Tag.MACHINELEARNING,
-        Tag.DEEPLEARNING,
-        Tag.AZURE,
-        Tag.JUPYTER
-      ]
+      name: 'AI Portfolio Website',
+      summary: 'Personal portfolio showcasing AI/ML expertise with modern Angular architecture.',
+      description: 'Modern portfolio built with Angular standalone components showcasing projects, case studies, and reproducible notebooks. Implements dynamic filtering by skills/tags, responsive design, and accessible components. Includes CI/CD and static hosting. Focus: Frontend, Deployment, UX.',
+      projectLink: 'https://github.com/SurajKhodade15/DevPersona',
+      tags: [Tag.ANGULAR, Tag.TYPESCRIPT, Tag.HTML5, Tag.CSS3, Tag.GIT, Tag.GITHUB]
     },
     {
       id: 8,
-      name: 'MLOps Pipeline Framework',
-      summary: 'End-to-end machine learning operations and model deployment platform.',
-      description: 'Built a comprehensive MLOps framework for automated model training, validation, and deployment. Implemented CI/CD pipelines for ML models using Azure DevOps, model versioning with MLflow, and automated testing with great expectations. Created monitoring dashboards for model drift detection and performance tracking. Supported multiple deployment targets including Azure ML, Azure Functions, and container instances.',
-      projectLink: 'https://github.com/SurajKhodade15/mlops-framework',
-      tags: [
-        Tag.PYTHON,
-        Tag.AZURE,
-        Tag.DOCKER,
-        Tag.AZUREDEVOPS,
-        Tag.MACHINELEARNING,
-        Tag.CI_CD,
-        Tag.GIT,
-        Tag.RESTAPI
-      ]
+      name: 'Medical Diagnosis AI System',
+      summary: 'Deep learning models for medical image analysis and disease detection.',
+      description: 'End-to-end medical image analysis platform using CNNs and attention mechanisms for detection tasks across X-ray, CT and MRI modalities. Emphasizes transfer learning, model explainability, DICOM handling, and deployment as a secure inference service. Validated on public medical datasets and tuned for clinical-style evaluation metrics. Focus: ML, Deep Learning, Explainability.',
+      projectLink: 'https://github.com/SurajKhodade15/medical-ai-diagnosis',
+      tags: [Tag.PYTHON, Tag.TENSORFLOW, Tag.PYTORCH, Tag.OPENCV, Tag.DEEPLEARNING, Tag.NUMPY, Tag.GIT]
     },
     {
       id: 9,
-      name: 'Medical Image Segmentation',
-      summary: 'Deep learning for precise organ and tumor segmentation in medical images.',
-      description: 'Developed advanced image segmentation models using U-Net, SegNet, and custom architectures for medical imaging. Specialized in brain tumor segmentation, lung nodule detection, and cardiac structure analysis. Implemented data augmentation techniques and transfer learning achieving 95% Dice coefficient. Used DICOM processing and integrated with PACS systems. Validated on multiple medical imaging datasets including BraTS and LUNA16.',
-      projectLink: 'https://github.com/SurajKhodade15/medical-segmentation',
-      tags: [
-        Tag.PYTHON,
-        Tag.TENSORFLOW,
-        Tag.PYTORCH,
-        Tag.OPENCV,
-        Tag.DEEPLEARNING,
-        Tag.NUMPY,
-        Tag.MATPLOTLIB,
-        Tag.JUPYTER
-      ]
+      name: 'Healthcare Predictive Analytics',
+      summary: 'ML platform for patient outcome prediction and operational forecasting.',
+      description: 'Predictive models for readmission risk, length-of-stay, and resource allocation using time-series and tabular ML techniques. Feature engineering for EHRs, calibration, and fairness checks were included. Deployed models with monitoring and retraining pipelines. Focus: ML, Time Series.',
+      projectLink: 'https://github.com/SurajKhodade15/healthcare-ml',
+      tags: [Tag.PYTHON, Tag.PANDAS, Tag.SCIKITLEARN, Tag.MACHINELEARNING, Tag.JUPYTER, Tag.GIT]
     },
     {
       id: 10,
-      name: 'AI Portfolio Website',
-      summary: 'Personal portfolio showcasing AI/ML expertise with modern Angular architecture.',
-      description: 'Modern portfolio website built with Angular standalone components and .NET Core API backend. Features responsive design with glass-morphism effects, dynamic project filtering, and interactive technology showcases. Implements custom animations, mobile-optimized navigation, and accessibility features. Showcases AI/ML projects with detailed case studies and technical implementations. Deployed with CI/CD pipelines and optimized for performance.',
-      projectLink: 'https://github.com/SurajKhodade15/ai-portfolio',
-      tags: [
-        Tag.ANGULAR,
-        Tag.TYPESCRIPT,
-        Tag.DOTNETCORE,
-        Tag.HTML5,
-        Tag.CSS3,
-        Tag.RESTAPI,
-        Tag.AZURE,
-        Tag.GIT,
-        Tag.GITHUB
-      ]
+      name: 'Computer Vision for Retail',
+      summary: 'Real-time object detection and inventory management using deep learning.',
+      description: 'Built a computer vision solution for retail: product detection, shelf analytics, and automated inventory counts using YOLO-family models. Included custom dataset collection, annotation tooling, and edge optimization for on-prem inference. Focus: Computer Vision, Deep Learning.',
+      projectLink: 'https://github.com/SurajKhodade15/retail-cv',
+      tags: [Tag.PYTHON, Tag.PYTORCH, Tag.OPENCV, Tag.DOCKER, Tag.DEEPLEARNING, Tag.GIT]
+    },
+    {
+      id: 11,
+      name: 'NLP Sentiment Analysis Engine',
+      summary: 'Transformer-based multilingual sentiment & emotion detection.',
+      description: 'Transformer-based sentiment engine with multilingual support, emotion detection, and topic modeling. Designed for streaming social data and long-form feedback via chunking and RAG (retrieval-augmented generation) where helpful. Focus: NLP, LLM.',
+      projectLink: 'https://github.com/SurajKhodade15/nlp-sentiment',
+      tags: [Tag.PYTHON, Tag.NLP, Tag.LLM, Tag.SPACY, Tag.FASTAPI, Tag.JUPYTER, Tag.GIT]
+    },
+    {
+      id: 12,
+      name: 'AI-Powered Drug Discovery',
+      summary: 'Graph neural networks and generative models for molecular discovery.',
+      description: 'Platform using GNNs for molecular property prediction, ADMET screening, and generative models for molecule design. Includes integration with ChEMBL/PubChem, docking score proxies, and lead prioritization workflows. Focus: ML, Deep Learning, Scientific ML.',
+      projectLink: 'https://github.com/SurajKhodade15/ai-drug-discovery',
+      tags: [Tag.PYTHON, Tag.PYTORCH, Tag.TENSORFLOW, Tag.MACHINELEARNING, Tag.GENAI, Tag.GIT]
+    },
+    {
+      id: 13,
+      name: 'Smart Healthcare Chatbot',
+      summary: 'Conversational AI for medical triage, scheduling and reminders.',
+      description: 'Conversational agent combining retrieval, medical knowledge graphs and LLM prompts for symptom checking, appointment booking, and follow-up reminders. Built with privacy-preserving design and audit logs to meet compliance requirements. Focus: NLP, Agentic AI, LLM.',
+      projectLink: 'https://github.com/SurajKhodade15/medical-chatbot',
+      tags: [Tag.PYTHON, Tag.NLP, Tag.LLM, Tag.FASTAPI, Tag.GENAI, Tag.GIT]
+    },
+    {
+      id: 14,
+      name: 'Time Series Forecasting Platform',
+      summary: 'Forecasting for business and healthcare metrics using deep/time-series models.',
+      description: 'Forecasting platform built with LSTM/GRU/Transformer models, automated feature extraction, backtesting and model selection. Used for patient census forecasting, inventory demand and financial time series. Focus: Time Series, ML.',
+      projectLink: 'https://github.com/SurajKhodade15/timeseries-forecast',
+      tags: [Tag.PYTHON, Tag.PANDAS, Tag.TENSORFLOW, Tag.MACHINELEARNING, Tag.JUPYTER, Tag.GIT]
+    },
+    {
+      id: 15,
+      name: 'MLOps Pipeline Framework',
+      summary: 'Automated ML pipelines, model governance and deployment tooling.',
+      description: 'End-to-end MLOps framework with CI/CD for models, MLflow model versioning, data validation, and monitoring for drift. Supports multiple deployment targets (cloud functions, containers) and integrates with observability tooling for production ML. Focus: MLOps, Deployment, MCP.',
+      projectLink: 'https://github.com/SurajKhodade15/mlops-framework',
+      tags: [Tag.PYTHON, Tag.AZURE, Tag.DOCKER, Tag.AZUREDEVOPS, Tag.CI_CD, Tag.GIT, Tag.MCP]
+    },
+    {
+      id: 16,
+      name: 'Medical Image Segmentation',
+      summary: 'Precise organ and lesion segmentation for medical imagery using advanced CNNs.',
+      description: 'State-of-the-art segmentation (U-Net family, attention U-Net) for organ and tumor delineation in CT and MRI. Focused on Dice/IoU optimization, post-processing, and integration with clinical pipelines (PACS). Achieved high Dice scores on public benchmarks. Focus: Medical Imaging, Deep Learning.',
+      projectLink: 'https://github.com/SurajKhodade15/medical-segmentation',
+      tags: [Tag.PYTHON, Tag.TENSORFLOW, Tag.PYTORCH, Tag.OPENCV, Tag.DEEPLEARNING, Tag.JUPYTER, Tag.GIT]
     }
-
   ];
-}
+  
+  // Return a view of projects with those having a GitHub/projectLink first
+  get sortedProjects(): Card[] {
+    return this.projects
+      .slice()
+      .sort((a, b) => {
+        const aHas = a.projectLink && a.projectLink.toString().trim().length > 0 ? 1 : 0;
+        const bHas = b.projectLink && b.projectLink.toString().trim().length > 0 ? 1 : 0;
+        // Projects with links first. If tie, keep original order by id ascending.
+        if (bHas !== aHas) return bHas - aHas;
+        return (a.id || 0) - (b.id || 0);
+      });
+  }
+  }

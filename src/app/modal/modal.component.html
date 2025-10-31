@@ -13,12 +13,12 @@
       <div class="content-section"> 
         <h1 class="modal-description">Description</h1>
         <p class="p-modal">{{ card.description }}</p>
-        <!-- <p class="p-modal">
-          <strong><span class="default-highlight">Github</span></strong>: 
-          <a [href]="card.projectLink" target="_blank" class="github a-green">
+        <p *ngIf="card.projectLink && card.projectLink.length" class="p-modal">
+          <strong><span class="default-highlight">GitHub</span></strong>: 
+          <a [href]="card.projectLink" target="_blank" rel="noopener" class="github a-green">
             {{ card.projectLink }}
           </a>
-        </p> -->
+        </p>
 
         <mat-divider class="divider"></mat-divider>
         
