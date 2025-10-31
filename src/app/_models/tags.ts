@@ -67,6 +67,13 @@ export class Tag {
   static readonly SPACY = new Tag('spaCy', '#4a6a77');
   static readonly JUPYTER = new Tag('Jupyter', '#4a6a77');
 
+  // Additional AI / ML tags
+  static readonly NLP = new Tag('NLP', '#00C0A0');
+  static readonly GENAI = new Tag('Generative AI', '#FFB86B');
+  static readonly LLM = new Tag('LLM', '#DDB6F2');
+  static readonly AGENTIC = new Tag('Agentic AI', '#9CDCFE');
+  static readonly MCP = new Tag('MCP', '#C586C0');
+
   // Java / Spring
   static readonly JAVA = new Tag('Java', '#5a7581');
   static readonly SPRINGBOOT = new Tag('Spring Boot', '#5a7581');

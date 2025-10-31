@@ -2,6 +2,7 @@
   <div class="card-body">
     <h5 class="card-title">{{ card.name }}</h5>
     <p class="card-text">{{ card.summary }}</p>
+    <p class="card-subtext">{{ card.description | slice:0:120 }}{{ card.description && card.description.length > 120 ? '...' : '' }}</p>
     <button class="button-small" (click)="openCardModal()"><a>View More</a></button>
   </div>
   <div class="card-footer">
@@ -9,6 +10,11 @@
       @for(tag of card.tags; track card.tags) {
       <div class="tag" [style.background-color]="tag.color">{{ tag }}</div>
       }
+    </div>
+    <div class="card-links">
+      <a *ngIf="card.projectLink && card.projectLink.length" class="project-link" [href]="card.projectLink" target="_blank" rel="noopener" title="Open project on GitHub">
+        🔗 View on GitHub
+      </a>
     </div>
   </div>
 </div>

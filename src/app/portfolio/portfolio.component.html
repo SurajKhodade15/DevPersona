@@ -12,27 +12,47 @@
         </p>
 
         <div class="focus-areas">
-          <div class="focus-item">
-            <span class="focus-icon">🏥</span>
-            <span class="focus-text">Healthcare AI</span>
-          </div>
-          <div class="focus-item">
-            <span class="focus-icon">👁️</span>
-            <span class="focus-text">Computer Vision</span>
-          </div>
-          <div class="focus-item">
-            <span class="focus-icon">🧠</span>
-            <span class="focus-text">Deep Learning</span>
-          </div>
-          <div class="focus-item">
-            <span class="focus-icon">📊</span>
-            <span class="focus-text">Data Science</span>
-          </div>
+            <div class="focus-item">
+              <span class="focus-icon">🏥</span>
+              <span class="focus-text">Healthcare AI</span>
+            </div>
+            <div class="focus-item">
+              <span class="focus-icon">👁️</span>
+              <span class="focus-text">Computer Vision</span>
+            </div>
+            <div class="focus-item">
+              <span class="focus-icon">🧠</span>
+              <span class="focus-text">Deep Learning</span>
+            </div>
+            <div class="focus-item">
+              <span class="focus-icon">📊</span>
+              <span class="focus-text">Data Science</span>
+            </div>
+            <div class="focus-item">
+              <span class="focus-icon">🤖</span>
+              <span class="focus-text">Generative AI (Gen AI)</span>
+            </div>
+            <div class="focus-item">
+              <span class="focus-icon">�</span>
+              <span class="focus-text">Agentic AI</span>
+            </div>
+            <div class="focus-item">
+              <span class="focus-icon">�️</span>
+              <span class="focus-text">NLP & LLM</span>
+            </div>
+            <div class="focus-item">
+              <span class="focus-icon">⚙️</span>
+              <span class="focus-text">MCP / Model Connect Patterns</span>
+            </div>
+            <div class="focus-item">
+              <span class="focus-icon">⚙️</span>
+              <span class="focus-text">MLOps & Deployment</span>
+            </div>
         </div>
       </div>
 
       <div class="projects-grid">
-        @for(project of projects; track project.id) {
+        @for(project of sortedProjects; track project.id) {
         <div class="project-card-wrapper">
           <app-project-card [card]="project"></app-project-card>
         </div>
