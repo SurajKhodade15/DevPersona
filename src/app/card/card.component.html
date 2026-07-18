@@ -3,7 +3,7 @@
     <h5 class="card-title">{{ card.name }}</h5>
     <p class="card-text">{{ card.summary }}</p>
     <p class="card-subtext">{{ card.description | slice:0:120 }}{{ card.description && card.description.length > 120 ? '...' : '' }}</p>
-    <button class="button-small" (click)="openCardModal()"><a>View More</a></button>
+    <button class="button-small" type="button" (click)="openCardModal()">View More</button>
   </div>
   <div class="card-footer">
     <div class="tags-container">
@@ -12,7 +12,7 @@
       }
     </div>
     <div class="card-links">
-      <a *ngIf="card.projectLink && card.projectLink.length" class="project-link" [href]="card.projectLink" target="_blank" rel="noopener" title="Open project on GitHub">
+      <a *ngIf="card.projectLink && card.projectLink.length" class="project-link" [href]="card.projectLink" target="_blank" rel="noopener noreferrer" title="Open project on GitHub">
         🔗 View on GitHub
       </a>
     </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { RouterLink } from '@angular/router';
 
@@ -14,17 +14,16 @@ import { RouterLink } from '@angular/router';
   ]
 })
 
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
 
   dynamicText: string = "";
   phrases: string[] = [
     "AI/ML Engineer.",
     "GenAI Specialist.",
     "Data Scientist.",
-    "Deep Learning Architect.",
+    "Agentic AI Engineer.",
     "NLP & LLM Expert.",
-    "Cloud-Native AI Developer.",
-    ".NET Fullstack Engineer.",
+    "AI Product Builder.",
   ];
 
 
@@ -35,6 +34,7 @@ export class HomeComponent implements OnInit {
   typingSpeed: number = 70;
   deletingSpeed: number = 70;
   delayBetweenPhrases: number = 1000;
+  private typingTimer: ReturnType<typeof setTimeout> | null = null;
 
   constructor(private titleService: Title) {
     this.titleService.setTitle('Home')
@@ -42,7 +42,19 @@ export class HomeComponent implements OnInit {
 
 
   ngOnInit(): void {
+    if (typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      this.dynamicText = this.phrases[0];
+      return;
+    }
+
     this.type();
+  }
+
+  ngOnDestroy(): void {
+    if (this.typingTimer) {
+      clearTimeout(this.typingTimer);
+      this.typingTimer = null;
+    }
   }
 
   type() {
@@ -57,14 +69,14 @@ export class HomeComponent implements OnInit {
 
     if (!this.isDeleting && this.currentCharIndex === currentPhrase.length) {
       this.isDeleting = true;
-      setTimeout(() => this.type(), this.delayBetweenPhrases);
+      this.typingTimer = setTimeout(() => this.type(), this.delayBetweenPhrases);
     } else if (this.isDeleting && this.currentCharIndex === 0) {
       this.isDeleting = false;
       this.currentPhraseIndex = (this.currentPhraseIndex + 1) % this.phrases.length;
-      setTimeout(() => this.type(), 500);
+      this.typingTimer = setTimeout(() => this.type(), 500);
     } else {
       const speed = this.isDeleting ? this.deletingSpeed : this.typingSpeed;
-      setTimeout(() => this.type(), speed);
+      this.typingTimer = setTimeout(() => this.type(), speed);
     }
   }
 

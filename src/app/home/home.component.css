@@ -1,17 +1,15 @@
 /* Standardized Main Container */
 .home-container {
   min-height: calc(100vh - 72px);
-  /* Account for header height */
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
-    url('../../assets/ai-banner.jpg');
+  background: var(--page-overlay), var(--page-bg-image);
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   padding: 80px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   position: relative;
 }
 
@@ -22,10 +20,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg,
-      rgba(0, 212, 255, 0.1) 0%,
-      rgba(0, 255, 136, 0.05) 50%,
-      rgba(0, 212, 255, 0.1) 100%);
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.08), rgba(0, 255, 136, 0.03));
   pointer-events: none;
 }
 
@@ -33,12 +28,11 @@
 .home-content {
   max-width: 1200px;
   width: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(20px);
-  border-radius: 20px;
+  background: var(--surface-bg);
+  border-radius: var(--radius-lg);
   padding: 60px 50px;
-  border: 1px solid rgba(0, 212, 255, 0.3);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  border: var(--surface-border);
+  box-shadow: var(--surface-shadow);
   position: relative;
   z-index: 1;
   text-align: left;
@@ -76,6 +70,15 @@
 }
 
 /* Typography */
+.eyebrow {
+  color: #00FF88;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 0.8rem;
+}
+
 .home-title {
   font-size: 2.5rem;
   line-height: 3rem;
@@ -85,13 +88,66 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
+.quick-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin: 1rem 0 1.4rem;
+}
+
+.metric-chip {
+  background: rgba(0, 212, 255, 0.12);
+  color: #DDF6FF;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 999px;
+  padding: 0.45rem 0.85rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
 .home-author {
   font-size: 1.8rem;
   color: #ffffff;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
   line-height: 2.4rem;
   font-weight: 500;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.home-intro {
+  color: #E8E8E8;
+  font-size: 1.12rem;
+  line-height: 1.8;
+  margin: 1.3rem 0 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 10px;
+  padding: 1.1rem 1.3rem;
+}
+
+.strengths-block {
+  margin-top: 1.1rem;
+  background: rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 12px;
+  padding: 1rem 1.4rem;
+}
+
+.strengths-title {
+  margin: 0 0 0.8rem;
+  color: #00D4FF;
+  font-size: 1.15rem;
+}
+
+.strengths-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: #E8E8E8;
+  line-height: 1.7;
+}
+
+.strengths-list li {
+  margin-bottom: 0.35rem;
 }
 
 #dynamic-text {
@@ -150,9 +206,9 @@ blockquote {
 .home-paragraph.highlight {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #cc1a1a;
+  color: #F5F5F5;
   background: linear-gradient(135deg, rgba(0, 255, 136, 0.15), rgba(0, 212, 255, 0.1));
-  border: 2px solid #717bd4;
+  border: 2px solid rgba(0, 255, 136, 0.5);
   padding: 1.5rem 2rem;
   border-radius: 12px;
   text-align: center;
@@ -160,6 +216,31 @@ blockquote {
   box-shadow: 0 4px 20px rgba(0, 255, 136, 0.2);
   margin: 2rem 0;
   animation: glow 2s ease-in-out infinite alternate;
+}
+
+.delivery-block {
+  margin-top: 1.8rem;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 12px;
+  padding: 1rem 1.4rem;
+}
+
+.delivery-title {
+  margin: 0 0 0.8rem;
+  color: #00FF88;
+  font-size: 1.15rem;
+}
+
+.delivery-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: #E8E8E8;
+  line-height: 1.7;
+}
+
+.delivery-list li {
+  margin-bottom: 0.35rem;
 }
 
 @keyframes glow {
@@ -177,22 +258,27 @@ blockquote {
   gap: 1.5rem;
   flex-wrap: wrap;
   margin-top: 2rem;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
-.home-buttons button {
+.home-action {
+  display: inline-block;
   background: linear-gradient(145deg, rgba(0, 212, 255, 0.2), rgba(0, 255, 136, 0.15));
   border: 2px solid #00D4FF;
   padding: 1rem 2rem;
   border-radius: 10px;
   transition: all 0.4s ease;
-  backdrop-filter: blur(15px);
   box-shadow: 0 6px 20px rgba(0, 212, 255, 0.3);
   position: relative;
   overflow: hidden;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
 
-.home-buttons button::before {
+.home-action::before {
   content: '';
   position: absolute;
   top: 0;
@@ -203,34 +289,30 @@ blockquote {
   transition: left 0.5s;
 }
 
-.home-buttons button:hover::before {
+.home-action:hover::before {
   left: 100%;
 }
 
-.home-buttons button:hover {
+.home-action:hover {
   background: linear-gradient(145deg, #00D4FF, #00FF88);
   transform: translateY(-5px) scale(1.05);
   box-shadow: 0 12px 35px rgba(0, 212, 255, 0.5);
   border-color: #00FF88;
-}
-
-.home-buttons a {
-  text-decoration: none;
-  color: #FFFFFF;
-  font-weight: 600;
-  font-size: 1rem;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
-  position: relative;
-  z-index: 1;
-}
-
-.home-buttons button:hover a {
   color: #000000;
   text-shadow: none;
 }
 
+.home-action:focus-visible {
+  outline: 3px solid #00FF88;
+  outline-offset: 3px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
+  .eyebrow {
+    font-size: 0.85rem;
+  }
+
   .home-title {
     font-size: 2rem;
     line-height: 2.6rem;
@@ -246,13 +328,32 @@ blockquote {
     padding: 0.8rem 1.2rem;
   }
 
+  .home-intro {
+    font-size: 1rem;
+    padding: 0.9rem 1rem;
+  }
+
   .home-buttons {
     justify-content: center;
     gap: 1rem;
   }
 
-  .home-buttons button {
+  .home-action {
     padding: 0.8rem 1.5rem;
+  }
+
+  .metric-chip {
+    font-size: 0.8rem;
+  }
+
+  .strengths-title,
+  .delivery-title {
+    font-size: 1.05rem;
+  }
+
+  .strengths-block,
+  .delivery-block {
+    padding: 0.9rem 1rem;
   }
 
   blockquote {
@@ -277,6 +378,11 @@ blockquote {
     padding: 0.8rem 1rem;
   }
 
+  .home-intro {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
   .home-paragraph.highlight {
     font-size: 1.1rem;
     padding: 1.2rem 1.5rem;
@@ -287,9 +393,10 @@ blockquote {
     align-items: center;
   }
 
-  .home-buttons button {
+  .home-action {
     width: 100%;
     max-width: 300px;
+    text-align: center;
   }
 
   blockquote {
