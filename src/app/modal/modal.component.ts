@@ -1,4 +1,5 @@
 import { Component, Inject, AfterViewInit } from '@angular/core';
+import { NgIf } from '@angular/common';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { register } from 'swiper/element/bundle';
 import { SwiperOptions } from 'swiper/types';
@@ -22,6 +23,7 @@ register();
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.css'],
   imports: [
+    NgIf,
     MatIconModule,
     MatButtonModule,
     MatChipsModule,

@@ -115,13 +115,6 @@
   box-shadow: 0 8px 20px rgba(0, 212, 255, 0.4);
 }
 
-.button-small a {
-  text-decoration: none;
-  color: inherit;
-  position: relative;
-  z-index: 1;
-}
-
 .card-footer {
   margin-top: auto;
   position: relative;

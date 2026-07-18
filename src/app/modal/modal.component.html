@@ -15,7 +15,7 @@
         <p class="p-modal">{{ card.description }}</p>
         <p *ngIf="card.projectLink && card.projectLink.length" class="p-modal">
           <strong><span class="default-highlight">GitHub</span></strong>: 
-          <a [href]="card.projectLink" target="_blank" rel="noopener" class="github a-green">
+          <a [href]="card.projectLink" target="_blank" rel="noopener noreferrer" class="github a-green">
             {{ card.projectLink }}
           </a>
         </p>

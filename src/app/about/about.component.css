@@ -131,6 +131,20 @@
   animation: subtleGlow 3s ease-in-out infinite alternate;
 }
 
+.journey-list {
+  margin: 0 0 2rem;
+  padding: 1.2rem 1.8rem 1.2rem 2.8rem;
+  color: #F5F5F5;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  line-height: 1.8;
+}
+
+.journey-list li {
+  margin-bottom: 0.7rem;
+}
+
 @keyframes subtleGlow {
   from {
     box-shadow: 0 6px 25px rgba(0, 255, 136, 0.2);
@@ -177,6 +191,7 @@
 }
 
 .cta-button {
+  display: inline-block;
   background: linear-gradient(145deg, rgba(0, 212, 255, 0.2), rgba(0, 255, 136, 0.15));
   border: 2px solid #00D4FF;
   padding: 1.2rem 2.5rem;
@@ -187,6 +202,11 @@
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
 
 .cta-button::before {
@@ -209,19 +229,6 @@
   transform: translateY(-5px) scale(1.05);
   box-shadow: 0 15px 40px rgba(0, 212, 255, 0.5);
   border-color: #00FF88;
-}
-
-.cta-button a {
-  text-decoration: none;
-  color: #FFFFFF;
-  font-weight: 700;
-  font-size: 1.1rem;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
-  position: relative;
-  z-index: 1;
-}
-
-.cta-button:hover a {
   color: #000000;
   text-shadow: none;
 }
@@ -289,10 +296,8 @@
     max-width: 300px;
   }
 
-  .cta-button a {
-    font-size: 1rem;
-  }
 }
+
 
 @media (max-width: 480px) {
   .about-container {

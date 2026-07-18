@@ -180,7 +180,8 @@ blockquote {
   justify-content: center;
 }
 
-.home-buttons button {
+.home-action {
+  display: inline-block;
   background: linear-gradient(145deg, rgba(0, 212, 255, 0.2), rgba(0, 255, 136, 0.15));
   border: 2px solid #00D4FF;
   padding: 1rem 2rem;
@@ -190,9 +191,14 @@ blockquote {
   box-shadow: 0 6px 20px rgba(0, 212, 255, 0.3);
   position: relative;
   overflow: hidden;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
 
-.home-buttons button::before {
+.home-action::before {
   content: '';
   position: absolute;
   top: 0;
@@ -203,30 +209,22 @@ blockquote {
   transition: left 0.5s;
 }
 
-.home-buttons button:hover::before {
+.home-action:hover::before {
   left: 100%;
 }
 
-.home-buttons button:hover {
+.home-action:hover {
   background: linear-gradient(145deg, #00D4FF, #00FF88);
   transform: translateY(-5px) scale(1.05);
   box-shadow: 0 12px 35px rgba(0, 212, 255, 0.5);
   border-color: #00FF88;
-}
-
-.home-buttons a {
-  text-decoration: none;
-  color: #FFFFFF;
-  font-weight: 600;
-  font-size: 1rem;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
-  position: relative;
-  z-index: 1;
-}
-
-.home-buttons button:hover a {
   color: #000000;
   text-shadow: none;
+}
+
+.home-action:focus-visible {
+  outline: 3px solid #00FF88;
+  outline-offset: 3px;
 }
 
 /* Responsive */
@@ -251,7 +249,7 @@ blockquote {
     gap: 1rem;
   }
 
-  .home-buttons button {
+  .home-action {
     padding: 0.8rem 1.5rem;
   }
 
