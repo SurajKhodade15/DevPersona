@@ -12,6 +12,6 @@ import { Title } from '@angular/platform-browser';
 })
 export class SkillsComponent {
   constructor(private titleService: Title) {
-    this.titleService.setTitle('Experience')
+    this.titleService.setTitle('Skills and Experience')
   }
 }

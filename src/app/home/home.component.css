@@ -114,10 +114,46 @@
 .home-author {
   font-size: 1.8rem;
   color: #ffffff;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
   line-height: 2.4rem;
   font-weight: 500;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.home-intro {
+  color: #E8E8E8;
+  font-size: 1.12rem;
+  line-height: 1.8;
+  margin: 1.3rem 0 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 10px;
+  padding: 1.1rem 1.3rem;
+}
+
+.strengths-block {
+  margin-top: 1.1rem;
+  background: rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 12px;
+  padding: 1rem 1.4rem;
+}
+
+.strengths-title {
+  margin: 0 0 0.8rem;
+  color: #00D4FF;
+  font-size: 1.15rem;
+}
+
+.strengths-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: #E8E8E8;
+  line-height: 1.7;
+}
+
+.strengths-list li {
+  margin-bottom: 0.35rem;
 }
 
 #dynamic-text {
@@ -176,9 +212,9 @@ blockquote {
 .home-paragraph.highlight {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #cc1a1a;
+  color: #F5F5F5;
   background: linear-gradient(135deg, rgba(0, 255, 136, 0.15), rgba(0, 212, 255, 0.1));
-  border: 2px solid #717bd4;
+  border: 2px solid rgba(0, 255, 136, 0.5);
   padding: 1.5rem 2rem;
   border-radius: 12px;
   text-align: center;
@@ -228,7 +264,7 @@ blockquote {
   gap: 1.5rem;
   flex-wrap: wrap;
   margin-top: 2rem;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .home-action {
@@ -299,6 +335,11 @@ blockquote {
     padding: 0.8rem 1.2rem;
   }
 
+  .home-intro {
+    font-size: 1rem;
+    padding: 0.9rem 1rem;
+  }
+
   .home-buttons {
     justify-content: center;
     gap: 1rem;
@@ -312,8 +353,14 @@ blockquote {
     font-size: 0.8rem;
   }
 
+  .strengths-title,
   .delivery-title {
     font-size: 1.05rem;
+  }
+
+  .strengths-block,
+  .delivery-block {
+    padding: 0.9rem 1rem;
   }
 
   blockquote {
@@ -336,6 +383,11 @@ blockquote {
   .home-paragraph {
     font-size: 0.95rem;
     padding: 0.8rem 1rem;
+  }
+
+  .home-intro {
+    font-size: 0.95rem;
+    line-height: 1.65;
   }
 
   .home-paragraph.highlight {

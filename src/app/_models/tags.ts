@@ -42,6 +42,9 @@ export class Tag {
 
   // Messaging & Queueing
   static readonly RABBITMQ = new Tag('RabbitMQ', '#457189');
+  static readonly QDRANT = new Tag('Qdrant Vector DB', '#457189');
+  static readonly AWSBEDROCK = new Tag('AWS Bedrock', '#457189');
+  static readonly AISERVICE = new Tag('AI Service', '#457189');
 
   // Python / Data / Automation
   static readonly PYTHON = new Tag('Python', '#4a6a77');

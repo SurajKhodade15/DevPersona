@@ -145,6 +145,15 @@
   margin-bottom: 0.7rem;
 }
 
+.about-list {
+  margin: 0.8rem 0 0;
+  padding-left: 1.4rem;
+}
+
+.about-list li {
+  margin-bottom: 0.6rem;
+}
+
 @keyframes subtleGlow {
   from {
     box-shadow: 0 6px 25px rgba(0, 255, 136, 0.2);
@@ -329,77 +338,6 @@
 
   .cta-button {
     padding: 0.8rem 1.5rem;
-  }
-}
-
-/* Responsive Design */
-@media (max-width: 1200px) {
-  .about-content {
-    padding: 50px 40px;
-    max-width: 1200px;
-  }
-}
-
-@media (max-width: 768px) {
-  .about-container {
-    padding: 40px 15px;
-    background-attachment: scroll;
-    min-height: calc(100vh - 60px);
-  }
-
-  .about-content {
-    padding: 40px 25px;
-    border-radius: 15px;
-  }
-
-  .about-title {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-  }
-
-  .about-paragraph {
-    font-size: 1rem;
-    padding: 1rem 1.5rem;
-  }
-
-  .about-picture {
-    width: 200px;
-    height: 200px;
-  }
-
-  .cta-button {
-    padding: 12px 25px;
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .about-container {
-    padding: 30px 10px;
-  }
-
-  .about-content {
-    padding: 30px 20px;
-  }
-
-  .about-title {
-    font-size: 2rem;
-    letter-spacing: -0.5px;
-  }
-
-  .about-paragraph {
-    font-size: 0.95rem;
-    padding: 0.8rem 1.2rem;
-  }
-
-  .about-picture {
-    width: 160px;
-    height: 160px;
-  }
-
-  .cta-button {
-    padding: 10px 20px;
-    font-size: 0.95rem;
   }
 }
 
