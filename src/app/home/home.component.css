@@ -76,6 +76,15 @@
 }
 
 /* Typography */
+.eyebrow {
+  color: #00FF88;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 0.8rem;
+}
+
 .home-title {
   font-size: 2.5rem;
   line-height: 3rem;
@@ -83,6 +92,23 @@
   margin-bottom: 1.2rem;
   font-weight: 700;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.quick-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin: 1rem 0 1.4rem;
+}
+
+.metric-chip {
+  background: rgba(0, 212, 255, 0.12);
+  color: #DDF6FF;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 999px;
+  padding: 0.45rem 0.85rem;
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
 .home-author {
@@ -162,6 +188,31 @@ blockquote {
   animation: glow 2s ease-in-out infinite alternate;
 }
 
+.delivery-block {
+  margin-top: 1.8rem;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 12px;
+  padding: 1rem 1.4rem;
+}
+
+.delivery-title {
+  margin: 0 0 0.8rem;
+  color: #00FF88;
+  font-size: 1.15rem;
+}
+
+.delivery-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: #E8E8E8;
+  line-height: 1.7;
+}
+
+.delivery-list li {
+  margin-bottom: 0.35rem;
+}
+
 @keyframes glow {
   from {
     box-shadow: 0 4px 20px rgba(0, 255, 136, 0.2);
@@ -229,6 +280,10 @@ blockquote {
 
 /* Responsive */
 @media (max-width: 768px) {
+  .eyebrow {
+    font-size: 0.85rem;
+  }
+
   .home-title {
     font-size: 2rem;
     line-height: 2.6rem;
@@ -251,6 +306,14 @@ blockquote {
 
   .home-action {
     padding: 0.8rem 1.5rem;
+  }
+
+  .metric-chip {
+    font-size: 0.8rem;
+  }
+
+  .delivery-title {
+    font-size: 1.05rem;
   }
 
   blockquote {
@@ -285,9 +348,10 @@ blockquote {
     align-items: center;
   }
 
-  .home-buttons button {
+  .home-action {
     width: 100%;
     max-width: 300px;
+    text-align: center;
   }
 
   blockquote {
