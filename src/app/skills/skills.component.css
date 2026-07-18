@@ -1,18 +1,16 @@
 ﻿@import '../../styles.css';
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 .skills-container {
   min-height: calc(100vh - 72px);
-  background: linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.82)),
-    url('../../assets/ai-banner.jpg');
+  background: var(--page-overlay), var(--page-bg-image);
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   padding: 80px 20px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   position: relative;
 }
 
@@ -20,24 +18,18 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 212, 255, 0.1) 0%,
-    rgba(0, 255, 136, 0.05) 50%,
-    rgba(0, 212, 255, 0.1) 100%
-  );
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.08), rgba(0, 255, 136, 0.03));
   pointer-events: none;
 }
 
 .skills-content {
   max-width: 1200px;
   width: 100%;
-  background: rgba(0, 0, 0, 0.38);
-  backdrop-filter: blur(20px);
-  border-radius: 20px;
+  background: var(--surface-bg);
+  border-radius: var(--radius-lg);
   padding: 56px 46px;
-  border: 1px solid rgba(0, 212, 255, 0.3);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  border: var(--surface-border);
+  box-shadow: var(--surface-shadow);
   position: relative;
   z-index: 1;
 }

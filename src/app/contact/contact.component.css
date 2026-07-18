@@ -1,9 +1,7 @@
 @import '../../styles.css';
 
 :host {
-  --bg-start: #07121f;
-  --bg-end: #0f2535;
-  --panel: rgba(7, 17, 29, 0.88);
+  --panel: var(--surface-bg);
   --panel-border: rgba(0, 212, 255, 0.28);
   --text: #ecf2f8;
   --muted: #b6c5d6;
@@ -15,10 +13,10 @@
 .contact-page {
   min-height: calc(100vh - 72px);
   padding: 72px 20px;
-  background:
-    radial-gradient(circle at 15% 20%, rgba(0, 212, 255, 0.18), transparent 35%),
-    radial-gradient(circle at 85% 80%, rgba(0, 255, 136, 0.12), transparent 38%),
-    linear-gradient(140deg, var(--bg-start), var(--bg-end));
+  background: var(--page-overlay), var(--page-bg-image);
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
 }
 
 .contact-shell {
@@ -36,7 +34,7 @@
   border-radius: 18px;
   padding: 28px;
   color: var(--text);
-  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35);
+  box-shadow: var(--surface-shadow);
 }
 
 .profile-panel {
